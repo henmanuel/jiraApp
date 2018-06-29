@@ -115,7 +115,7 @@ class ChartManager{
             return Math.round(Math.random() * 255);
         };
 
-        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + ('0.5' || '.3') + ')';
     }
 
     pie(data, options = {}){
