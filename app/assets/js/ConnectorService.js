@@ -17,6 +17,8 @@ class connectorService {
     }
 
     getIssuesTop(project){
+        project.toLowerCase();
+
         let request = {
             'document' : 'issuesTop' + project.toUpperCase()
         };
