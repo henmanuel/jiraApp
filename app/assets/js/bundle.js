@@ -116,7 +116,7 @@ class ChartManager{
     }
 
     pie(data, options = {}){
-        new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
+        this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
             type: 'pie',
             data: data,
             options: options
@@ -399,7 +399,10 @@ class app{
                let options = {
                    onClick : (e)=>{
                        alert('chart');
-                       console.log(e)
+                       console.log(e);
+
+                       let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
+                       console.log(activeElement);
                    }
                };
 
