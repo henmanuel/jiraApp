@@ -231,12 +231,12 @@ class connectorService {
                 resolve(response);
             }).fail(function(response){
                 let dataResponse = 'A error as occurred';
+                document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID).innerHTML = dataResponse;
 
                 if(response.responseText){
                     dataResponse = JSON.parse(response.responseText);
+                    resolve(dataResponse)
                 }
-
-                console.log(dataResponse)
             });
         })
     }
