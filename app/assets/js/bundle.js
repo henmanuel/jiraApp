@@ -368,7 +368,7 @@ class app{
                for(let key in requestTypes){
                    if(requestTypes.hasOwnProperty(key)){
                        labels.push(key);
-                       data.push(requestTypes[key].length)
+                       data.push(_.size(requestTypes[key]))
                    }
                }
 
