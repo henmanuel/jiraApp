@@ -402,6 +402,17 @@ class app{
                        console.log(e);
 
                        let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
+
+                       try{
+                           let req = activeElements[0]['_model']['label'];
+                       }catch(err){
+                           req = false;
+                       }
+
+                       if(req){
+                           alert(req)
+                       }
+
                        console.log(activeElement);
                    }
                };
