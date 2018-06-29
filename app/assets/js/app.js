@@ -72,11 +72,11 @@ class app{
                    labels: labels
                };
 
-               options = {
+               let options = {
                    onClick : this.merchantIssuesChart
                };
 
-               topIssuesChart.pie(data);
+               topIssuesChart.pie(data, options);
            }
         });
     }
