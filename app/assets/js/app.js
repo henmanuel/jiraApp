@@ -73,16 +73,14 @@ class app{
                };
 
                let options = {
-                   onClick : this.merchantIssuesChart
+                   onClick : (e)=>{
+                       alert('chart');
+                       console.log(e)
+                   }
                };
 
                topIssuesChart.pie(data, options);
            }
         });
-    }
-
-    merchantIssuesChart(e){
-        alert('chart');
-        console.log(e)
     }
 }new app();
