@@ -74,9 +74,6 @@ class app{
 
                let options = {
                    onClick : (e)=>{
-                       alert('chart');
-                       console.log(e);
-
                        let req;
                        let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
 
@@ -89,8 +86,6 @@ class app{
                        if(req){
                            alert(req)
                        }
-
-                       console.log(activeElement);
                    }
                };
 
