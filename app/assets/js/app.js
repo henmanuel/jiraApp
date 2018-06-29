@@ -52,8 +52,10 @@ class app{
                let labels = [];
                for(let key in requestTypes){
                    if(requestTypes.hasOwnProperty(key)){
+                       let issues = Array.from(requestTypes[key]);
+
                        labels.push(key);
-                       data.push(_.size(requestTypes[key]))
+                       data.push(issues.length)
                    }
                }
 
