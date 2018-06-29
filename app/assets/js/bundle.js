@@ -236,7 +236,7 @@ class connectorService {
                     dataResponse = JSON.parse(response.responseText);
                 }
 
-                document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID).innerHTML = dataResponse
+                console.log(dataResponse)
             });
         })
     }

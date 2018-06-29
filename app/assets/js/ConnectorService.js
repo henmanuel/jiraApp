@@ -96,7 +96,7 @@ class connectorService {
                     dataResponse = JSON.parse(response.responseText);
                 }
 
-                document.getElementById(appUI.contentID).innerHTML = dataResponse
+                console.log(dataResponse)
             });
         })
     }
