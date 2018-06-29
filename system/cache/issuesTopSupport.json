@@ -1500,6 +1500,303 @@
         "group": [
           "17"
         ]
+      },
+      "10085": {
+        "id": "10085",
+        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10085",
+        "key": "SUPPORT-77",
+        "fields": {
+          "issuetype": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issuetype\/10024",
+            "id": "10024",
+            "description": "Midas as a problem.",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?size=xsmall&avatarId=10308&avatarType=issuetype",
+            "name": "Problem",
+            "subtask": false,
+            "avatarId": 10308
+          },
+          "customfield_10070": null,
+          "customfield_10071": null,
+          "timespent": null,
+          "customfield_10072": null,
+          "customfield_10073": null,
+          "project": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/project\/10005",
+            "id": "10005",
+            "key": "SUPPORT",
+            "name": "MID-Support",
+            "projectTypeKey": "service_desk",
+            "avatarUrls": {
+              "48x48": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?pid=10005&avatarId=10201",
+              "24x24": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=small&pid=10005&avatarId=10201",
+              "16x16": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=xsmall&pid=10005&avatarId=10201",
+              "32x32": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=medium&pid=10005&avatarId=10201"
+            },
+            "projectCategory": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/projectCategory\/10000",
+              "id": "10000",
+              "description": "Midas proyect",
+              "name": "Midas"
+            }
+          },
+          "fixVersions": [],
+          "customfield_10034": {
+            "id": "9",
+            "name": "Time to resolution",
+            "_links": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10085\/sla\/9"
+            },
+            "ongoingCycle": {
+              "startTime": {
+                "iso8601": "2018-06-29T14:29:22-0600",
+                "jira": "2018-06-29T14:29:22.068-0600",
+                "friendly": "Today 2:29 PM",
+                "epochMillis": 1530304162068
+              },
+              "breachTime": {
+                "iso8601": "2018-07-03T14:29:22-0600",
+                "jira": "2018-07-03T14:29:22.068-0600",
+                "friendly": "03\/Jul\/18 2:29 PM",
+                "epochMillis": 1530649762068
+              },
+              "breached": false,
+              "paused": false,
+              "withinCalendarHours": true,
+              "goalDuration": {
+                "millis": 57600000,
+                "friendly": "16h"
+              },
+              "elapsedTime": {
+                "millis": 493,
+                "friendly": "0m"
+              },
+              "remainingTime": {
+                "millis": 57599507,
+                "friendly": "15h 59m"
+              }
+            }
+          },
+          "aggregatetimespent": null,
+          "resolution": null,
+          "customfield_10035": {
+            "id": "10",
+            "name": "Time to first response",
+            "_links": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10085\/sla\/10"
+            },
+            "ongoingCycle": {
+              "startTime": {
+                "iso8601": "2018-06-29T14:29:22-0600",
+                "jira": "2018-06-29T14:29:22.068-0600",
+                "friendly": "Today 2:29 PM",
+                "epochMillis": 1530304162068
+              },
+              "breachTime": {
+                "iso8601": "2018-07-02T14:29:22-0600",
+                "jira": "2018-07-02T14:29:22.068-0600",
+                "friendly": "02\/Jul\/18 2:29 PM",
+                "epochMillis": 1530563362068
+              },
+              "breached": false,
+              "paused": false,
+              "withinCalendarHours": true,
+              "goalDuration": {
+                "millis": 28800000,
+                "friendly": "8h"
+              },
+              "elapsedTime": {
+                "millis": 550,
+                "friendly": "0m"
+              },
+              "remainingTime": {
+                "millis": 28799450,
+                "friendly": "7h 59m"
+              }
+            }
+          },
+          "customfield_10036": null,
+          "customfield_10037": null,
+          "resolutiondate": null,
+          "workratio": -1,
+          "watches": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/SUPPORT-77\/watchers",
+            "watchCount": 0,
+            "isWatching": false
+          },
+          "lastViewed": null,
+          "customfield_10060": null,
+          "created": "2018-06-29T14:29:21.980-0600",
+          "customfield_10061": null,
+          "customfield_10062": null,
+          "customfield_10063": null,
+          "customfield_10064": null,
+          "customfield_10065": null,
+          "priority": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/priority\/3",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/images\/icons\/priorities\/medium.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "customfield_10067": null,
+          "customfield_10069": 2,
+          "labels": [],
+          "customfield_10016": null,
+          "timeestimate": null,
+          "aggregatetimeoriginalestimate": null,
+          "versions": [],
+          "issuelinks": [],
+          "assignee": null,
+          "updated": "2018-06-29T14:29:22.281-0600",
+          "status": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/status\/10026",
+            "description": "This was auto-generated by Jira Service Desk during workflow import",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/images\/icons\/status_generic.gif",
+            "name": "Waiting for support",
+            "id": "10026",
+            "statusCategory": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/statuscategory\/1",
+              "id": 1,
+              "key": "undefined",
+              "colorName": "medium-gray",
+              "name": "No Category"
+            }
+          },
+          "components": [],
+          "customfield_10051": null,
+          "timeoriginalestimate": null,
+          "customfield_10052": "test",
+          "description": null,
+          "customfield_10054": null,
+          "customfield_10055": null,
+          "customfield_10012": null,
+          "customfield_10056": null,
+          "customfield_10013": {
+            "_links": {
+              "jiraRest": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10085",
+              "web": "https:\/\/midasteam.atlassian.net\/servicedesk\/customer\/portal\/3\/SUPPORT-77",
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10085"
+            },
+            "requestType": {
+              "_expands": [
+                "field"
+              ],
+              "id": "41",
+              "_links": {
+                "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/servicedesk\/3\/requesttype\/41"
+              },
+              "name": "Status",
+              "description": "Request status info.",
+              "issueTypeId": "10024",
+              "serviceDeskId": "3",
+              "groupIds": [
+                "17"
+              ],
+              "icon": {
+                "id": "10484",
+                "_links": {
+                  "iconUrls": {
+                    "48x48": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=large&avatarId=10484",
+                    "24x24": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=small&avatarId=10484",
+                    "16x16": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=xsmall&avatarId=10484",
+                    "32x32": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=medium&avatarId=10484"
+                  }
+                }
+              }
+            },
+            "currentStatus": {
+              "status": "Waiting for support",
+              "statusCategory": "UNDEFINED",
+              "statusDate": {
+                "iso8601": "2018-06-29T14:29:21-0600",
+                "jira": "2018-06-29T14:29:21.980-0600",
+                "friendly": "Today 2:29 PM",
+                "epochMillis": 1530304161980
+              }
+            }
+          },
+          "customfield_10057": null,
+          "customfield_10058": null,
+          "customfield_10014": [],
+          "timetracking": [],
+          "customfield_10015": null,
+          "customfield_10006": null,
+          "security": null,
+          "customfield_10007": null,
+          "customfield_10008": [],
+          "aggregatetimeestimate": null,
+          "customfield_10009": "0|i0008n:",
+          "attachment": [],
+          "summary": "test",
+          "creator": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "accountId": "5b1fdbb602cfea1ba641082b",
+            "emailAddress": "midas@betcris.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+              "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+              "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+              "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+            },
+            "displayName": "Midas Team",
+            "active": true,
+            "timeZone": "America\/Costa_Rica"
+          },
+          "subtasks": [],
+          "reporter": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "accountId": "5b1fdbb602cfea1ba641082b",
+            "emailAddress": "midas@betcris.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+              "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+              "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+              "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+            },
+            "displayName": "Midas Team",
+            "active": true,
+            "timeZone": "America\/Costa_Rica"
+          },
+          "aggregateprogress": {
+            "progress": 0,
+            "total": 0
+          },
+          "customfield_10000": "{}",
+          "customfield_10001": null,
+          "customfield_10002": [],
+          "customfield_10046": null,
+          "customfield_10047": null,
+          "customfield_10048": 1,
+          "customfield_10038": "English",
+          "environment": null,
+          "duedate": null,
+          "progress": {
+            "progress": 0,
+            "total": 0
+          },
+          "votes": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/SUPPORT-77\/votes",
+            "votes": 0,
+            "hasVoted": false
+          },
+          "comment": {
+            "comments": [],
+            "maxResults": 0,
+            "total": 0,
+            "startAt": 0
+          },
+          "worklog": {
+            "startAt": 0,
+            "maxResults": 20,
+            "total": 0
+          }
+        },
+        "group": [
+          "17"
+        ]
       }
     },
     "P2P": {
@@ -1802,6 +2099,631 @@
         },
         "group": [
           "17"
+        ]
+      }
+    },
+    "Cashier": {
+      "10086": {
+        "id": "10086",
+        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10086",
+        "key": "SUPPORT-78",
+        "fields": {
+          "issuetype": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issuetype\/10022",
+            "id": "10022",
+            "description": "Midas Incident.",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?size=xsmall&avatarId=10303&avatarType=issuetype",
+            "name": "Incident",
+            "subtask": false,
+            "avatarId": 10303
+          },
+          "customfield_10070": null,
+          "customfield_10071": null,
+          "timespent": null,
+          "customfield_10072": null,
+          "customfield_10073": null,
+          "project": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/project\/10005",
+            "id": "10005",
+            "key": "SUPPORT",
+            "name": "MID-Support",
+            "projectTypeKey": "service_desk",
+            "avatarUrls": {
+              "48x48": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?pid=10005&avatarId=10201",
+              "24x24": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=small&pid=10005&avatarId=10201",
+              "16x16": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=xsmall&pid=10005&avatarId=10201",
+              "32x32": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=medium&pid=10005&avatarId=10201"
+            },
+            "projectCategory": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/projectCategory\/10000",
+              "id": "10000",
+              "description": "Midas proyect",
+              "name": "Midas"
+            }
+          },
+          "fixVersions": [],
+          "aggregatetimespent": null,
+          "customfield_10034": {
+            "id": "9",
+            "name": "Time to resolution",
+            "_links": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10086\/sla\/9"
+            },
+            "ongoingCycle": {
+              "startTime": {
+                "iso8601": "2018-06-29T14:33:05-0600",
+                "jira": "2018-06-29T14:33:05.088-0600",
+                "friendly": "Today 2:33 PM",
+                "epochMillis": 1530304385088
+              },
+              "breachTime": {
+                "iso8601": "2018-07-03T14:33:05-0600",
+                "jira": "2018-07-03T14:33:05.088-0600",
+                "friendly": "03\/Jul\/18 2:33 PM",
+                "epochMillis": 1530649985088
+              },
+              "breached": false,
+              "paused": false,
+              "withinCalendarHours": true,
+              "goalDuration": {
+                "millis": 57600000,
+                "friendly": "16h"
+              },
+              "elapsedTime": {
+                "millis": 542,
+                "friendly": "0m"
+              },
+              "remainingTime": {
+                "millis": 57599458,
+                "friendly": "15h 59m"
+              }
+            }
+          },
+          "customfield_10035": {
+            "id": "10",
+            "name": "Time to first response",
+            "_links": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10086\/sla\/10"
+            },
+            "ongoingCycle": {
+              "startTime": {
+                "iso8601": "2018-06-29T14:33:05-0600",
+                "jira": "2018-06-29T14:33:05.088-0600",
+                "friendly": "Today 2:33 PM",
+                "epochMillis": 1530304385088
+              },
+              "breachTime": {
+                "iso8601": "2018-07-02T14:33:05-0600",
+                "jira": "2018-07-02T14:33:05.088-0600",
+                "friendly": "02\/Jul\/18 2:33 PM",
+                "epochMillis": 1530563585088
+              },
+              "breached": false,
+              "paused": false,
+              "withinCalendarHours": true,
+              "goalDuration": {
+                "millis": 28800000,
+                "friendly": "8h"
+              },
+              "elapsedTime": {
+                "millis": 596,
+                "friendly": "0m"
+              },
+              "remainingTime": {
+                "millis": 28799404,
+                "friendly": "7h 59m"
+              }
+            }
+          },
+          "resolution": null,
+          "customfield_10036": null,
+          "customfield_10037": null,
+          "resolutiondate": null,
+          "workratio": -1,
+          "lastViewed": null,
+          "watches": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/SUPPORT-78\/watchers",
+            "watchCount": 0,
+            "isWatching": false
+          },
+          "customfield_10060": null,
+          "created": "2018-06-29T14:33:04.876-0600",
+          "customfield_10061": null,
+          "customfield_10062": null,
+          "customfield_10063": null,
+          "customfield_10064": null,
+          "customfield_10065": null,
+          "priority": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/priority\/3",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/images\/icons\/priorities\/medium.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "customfield_10067": null,
+          "customfield_10069": null,
+          "labels": [],
+          "customfield_10016": null,
+          "timeestimate": null,
+          "aggregatetimeoriginalestimate": null,
+          "versions": [],
+          "issuelinks": [],
+          "assignee": null,
+          "updated": "2018-06-29T14:33:05.323-0600",
+          "status": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/status\/10026",
+            "description": "This was auto-generated by Jira Service Desk during workflow import",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/images\/icons\/status_generic.gif",
+            "name": "Waiting for support",
+            "id": "10026",
+            "statusCategory": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/statuscategory\/1",
+              "id": 1,
+              "key": "undefined",
+              "colorName": "medium-gray",
+              "name": "No Category"
+            }
+          },
+          "components": [],
+          "customfield_10051": null,
+          "timeoriginalestimate": null,
+          "customfield_10052": "test",
+          "description": null,
+          "customfield_10054": null,
+          "customfield_10055": null,
+          "customfield_10056": null,
+          "customfield_10012": null,
+          "customfield_10013": {
+            "_links": {
+              "jiraRest": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10086",
+              "web": "https:\/\/midasteam.atlassian.net\/servicedesk\/customer\/portal\/3\/SUPPORT-78",
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10086"
+            },
+            "requestType": {
+              "_expands": [
+                "field"
+              ],
+              "id": "48",
+              "_links": {
+                "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/servicedesk\/3\/requesttype\/48"
+              },
+              "name": "Cashier",
+              "description": "There was an error in cashier.",
+              "issueTypeId": "10022",
+              "serviceDeskId": "3",
+              "groupIds": [
+                "16"
+              ],
+              "icon": {
+                "id": "10476",
+                "_links": {
+                  "iconUrls": {
+                    "48x48": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=large&avatarId=10476",
+                    "24x24": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=small&avatarId=10476",
+                    "16x16": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=xsmall&avatarId=10476",
+                    "32x32": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=medium&avatarId=10476"
+                  }
+                }
+              }
+            },
+            "currentStatus": {
+              "status": "Waiting for support",
+              "statusCategory": "UNDEFINED",
+              "statusDate": {
+                "iso8601": "2018-06-29T14:33:04-0600",
+                "jira": "2018-06-29T14:33:04.876-0600",
+                "friendly": "Today 2:33 PM",
+                "epochMillis": 1530304384876
+              }
+            }
+          },
+          "customfield_10057": null,
+          "customfield_10058": null,
+          "customfield_10014": [],
+          "timetracking": [],
+          "customfield_10015": null,
+          "customfield_10006": null,
+          "security": null,
+          "customfield_10007": null,
+          "customfield_10008": [],
+          "attachment": [
+            {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/attachment\/10006",
+              "id": "10006",
+              "filename": "Untitled.png",
+              "author": {
+                "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+                "name": "admin",
+                "key": "admin",
+                "accountId": "5b1fdbb602cfea1ba641082b",
+                "emailAddress": "midas@betcris.com",
+                "avatarUrls": {
+                  "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+                  "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+                  "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+                  "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+                },
+                "displayName": "Midas Team",
+                "active": true,
+                "timeZone": "America\/Costa_Rica"
+              },
+              "created": 1530304382503,
+              "size": 317367,
+              "mimeType": "image\/png",
+              "content": "https:\/\/midasteam.atlassian.net\/secure\/attachment\/10006\/Untitled.png",
+              "thumbnail": "https:\/\/midasteam.atlassian.net\/secure\/thumbnail\/10006\/Untitled.png"
+            }
+          ],
+          "customfield_10009": "0|i0008v:",
+          "aggregatetimeestimate": null,
+          "summary": "test",
+          "creator": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "accountId": "5b1fdbb602cfea1ba641082b",
+            "emailAddress": "midas@betcris.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+              "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+              "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+              "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+            },
+            "displayName": "Midas Team",
+            "active": true,
+            "timeZone": "America\/Costa_Rica"
+          },
+          "subtasks": [],
+          "reporter": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "accountId": "5b1fdbb602cfea1ba641082b",
+            "emailAddress": "midas@betcris.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+              "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+              "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+              "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+            },
+            "displayName": "Midas Team",
+            "active": true,
+            "timeZone": "America\/Costa_Rica"
+          },
+          "customfield_10000": "{}",
+          "aggregateprogress": {
+            "progress": 0,
+            "total": 0
+          },
+          "customfield_10001": null,
+          "customfield_10002": [],
+          "customfield_10046": null,
+          "customfield_10047": null,
+          "customfield_10048": null,
+          "customfield_10038": "English",
+          "environment": null,
+          "duedate": null,
+          "progress": {
+            "progress": 0,
+            "total": 0
+          },
+          "comment": {
+            "comments": [],
+            "maxResults": 0,
+            "total": 0,
+            "startAt": 0
+          },
+          "votes": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/SUPPORT-78\/votes",
+            "votes": 0,
+            "hasVoted": false
+          },
+          "worklog": {
+            "startAt": 0,
+            "maxResults": 20,
+            "total": 0
+          }
+        },
+        "group": [
+          "16"
+        ]
+      }
+    },
+    "Repeat Work": {
+      "10087": {
+        "id": "10087",
+        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10087",
+        "key": "SUPPORT-79",
+        "fields": {
+          "issuetype": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issuetype\/10023",
+            "id": "10023",
+            "description": "Request to Midas",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?size=xsmall&avatarId=10320&avatarType=issuetype",
+            "name": "Request Service",
+            "subtask": false,
+            "avatarId": 10320
+          },
+          "customfield_10070": null,
+          "customfield_10071": null,
+          "timespent": null,
+          "customfield_10072": null,
+          "customfield_10073": null,
+          "project": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/project\/10005",
+            "id": "10005",
+            "key": "SUPPORT",
+            "name": "MID-Support",
+            "projectTypeKey": "service_desk",
+            "avatarUrls": {
+              "48x48": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?pid=10005&avatarId=10201",
+              "24x24": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=small&pid=10005&avatarId=10201",
+              "16x16": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=xsmall&pid=10005&avatarId=10201",
+              "32x32": "https:\/\/midasteam.atlassian.net\/secure\/projectavatar?size=medium&pid=10005&avatarId=10201"
+            },
+            "projectCategory": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/projectCategory\/10000",
+              "id": "10000",
+              "description": "Midas proyect",
+              "name": "Midas"
+            }
+          },
+          "fixVersions": [],
+          "customfield_10034": {
+            "id": "9",
+            "name": "Time to resolution",
+            "_links": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10087\/sla\/9"
+            },
+            "ongoingCycle": {
+              "startTime": {
+                "iso8601": "2018-06-29T14:35:41-0600",
+                "jira": "2018-06-29T14:35:41.284-0600",
+                "friendly": "Today 2:35 PM",
+                "epochMillis": 1530304541284
+              },
+              "breachTime": {
+                "iso8601": "2018-07-03T14:35:41-0600",
+                "jira": "2018-07-03T14:35:41.284-0600",
+                "friendly": "03\/Jul\/18 2:35 PM",
+                "epochMillis": 1530650141284
+              },
+              "breached": false,
+              "paused": false,
+              "withinCalendarHours": true,
+              "goalDuration": {
+                "millis": 57600000,
+                "friendly": "16h"
+              },
+              "elapsedTime": {
+                "millis": 568,
+                "friendly": "0m"
+              },
+              "remainingTime": {
+                "millis": 57599432,
+                "friendly": "15h 59m"
+              }
+            }
+          },
+          "aggregatetimespent": null,
+          "customfield_10035": {
+            "id": "10",
+            "name": "Time to first response",
+            "_links": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10087\/sla\/10"
+            },
+            "ongoingCycle": {
+              "startTime": {
+                "iso8601": "2018-06-29T14:35:41-0600",
+                "jira": "2018-06-29T14:35:41.284-0600",
+                "friendly": "Today 2:35 PM",
+                "epochMillis": 1530304541284
+              },
+              "breachTime": {
+                "iso8601": "2018-07-02T14:35:41-0600",
+                "jira": "2018-07-02T14:35:41.284-0600",
+                "friendly": "02\/Jul\/18 2:35 PM",
+                "epochMillis": 1530563741284
+              },
+              "breached": false,
+              "paused": false,
+              "withinCalendarHours": true,
+              "goalDuration": {
+                "millis": 28800000,
+                "friendly": "8h"
+              },
+              "elapsedTime": {
+                "millis": 623,
+                "friendly": "0m"
+              },
+              "remainingTime": {
+                "millis": 28799377,
+                "friendly": "7h 59m"
+              }
+            }
+          },
+          "resolution": null,
+          "customfield_10036": null,
+          "customfield_10037": null,
+          "resolutiondate": null,
+          "workratio": -1,
+          "lastViewed": null,
+          "watches": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/SUPPORT-79\/watchers",
+            "watchCount": 0,
+            "isWatching": false
+          },
+          "customfield_10060": null,
+          "created": "2018-06-29T14:35:41.193-0600",
+          "customfield_10061": null,
+          "customfield_10062": null,
+          "customfield_10063": null,
+          "customfield_10064": null,
+          "customfield_10065": null,
+          "priority": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/priority\/3",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/images\/icons\/priorities\/medium.svg",
+            "name": "Medium",
+            "id": "3"
+          },
+          "customfield_10067": null,
+          "customfield_10069": null,
+          "labels": [],
+          "customfield_10016": null,
+          "timeestimate": null,
+          "aggregatetimeoriginalestimate": null,
+          "versions": [],
+          "issuelinks": [],
+          "assignee": null,
+          "updated": "2018-06-29T14:35:41.524-0600",
+          "status": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/status\/10026",
+            "description": "This was auto-generated by Jira Service Desk during workflow import",
+            "iconUrl": "https:\/\/midasteam.atlassian.net\/images\/icons\/status_generic.gif",
+            "name": "Waiting for support",
+            "id": "10026",
+            "statusCategory": {
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/statuscategory\/1",
+              "id": 1,
+              "key": "undefined",
+              "colorName": "medium-gray",
+              "name": "No Category"
+            }
+          },
+          "components": [],
+          "customfield_10051": null,
+          "timeoriginalestimate": null,
+          "customfield_10052": null,
+          "description": null,
+          "customfield_10054": null,
+          "customfield_10055": null,
+          "customfield_10056": null,
+          "customfield_10012": null,
+          "customfield_10057": null,
+          "customfield_10013": {
+            "_links": {
+              "jiraRest": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10087",
+              "web": "https:\/\/midasteam.atlassian.net\/servicedesk\/customer\/portal\/3\/SUPPORT-79",
+              "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/request\/10087"
+            },
+            "requestType": {
+              "_expands": [
+                "field"
+              ],
+              "id": "62",
+              "_links": {
+                "self": "https:\/\/midasteam.atlassian.net\/rest\/servicedeskapi\/servicedesk\/3\/requesttype\/62"
+              },
+              "name": "Repeat Work",
+              "description": "Request to eliminate repeated work",
+              "issueTypeId": "10023",
+              "serviceDeskId": "3",
+              "groupIds": [
+                "20"
+              ],
+              "icon": {
+                "id": "10458",
+                "_links": {
+                  "iconUrls": {
+                    "48x48": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=large&avatarId=10458",
+                    "24x24": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=small&avatarId=10458",
+                    "16x16": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=xsmall&avatarId=10458",
+                    "32x32": "https:\/\/midasteam.atlassian.net\/secure\/viewavatar?avatarType=SD_REQTYPE&size=medium&avatarId=10458"
+                  }
+                }
+              }
+            },
+            "currentStatus": {
+              "status": "Waiting for support",
+              "statusCategory": "UNDEFINED",
+              "statusDate": {
+                "iso8601": "2018-06-29T14:35:41-0600",
+                "jira": "2018-06-29T14:35:41.193-0600",
+                "friendly": "Today 2:35 PM",
+                "epochMillis": 1530304541193
+              }
+            }
+          },
+          "customfield_10058": null,
+          "customfield_10014": [],
+          "timetracking": [],
+          "customfield_10015": null,
+          "customfield_10006": null,
+          "security": null,
+          "customfield_10007": null,
+          "customfield_10008": [],
+          "customfield_10009": "0|i00093:",
+          "aggregatetimeestimate": null,
+          "attachment": [],
+          "summary": "test",
+          "creator": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "accountId": "5b1fdbb602cfea1ba641082b",
+            "emailAddress": "midas@betcris.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+              "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+              "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+              "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+            },
+            "displayName": "Midas Team",
+            "active": true,
+            "timeZone": "America\/Costa_Rica"
+          },
+          "subtasks": [],
+          "reporter": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "accountId": "5b1fdbb602cfea1ba641082b",
+            "emailAddress": "midas@betcris.com",
+            "avatarUrls": {
+              "48x48": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+              "24x24": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=24&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D24%26noRedirect%3Dtrue",
+              "16x16": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=16&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D16%26noRedirect%3Dtrue",
+              "32x32": "https:\/\/avatar-cdn.atlassian.com\/c57d5bce40ff4833ea1208f5466bd761?s=32&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc57d5bce40ff4833ea1208f5466bd761%3Fd%3Dmm%26s%3D32%26noRedirect%3Dtrue"
+            },
+            "displayName": "Midas Team",
+            "active": true,
+            "timeZone": "America\/Costa_Rica"
+          },
+          "customfield_10000": "{}",
+          "aggregateprogress": {
+            "progress": 0,
+            "total": 0
+          },
+          "customfield_10001": null,
+          "customfield_10002": [],
+          "customfield_10046": null,
+          "customfield_10047": null,
+          "customfield_10048": null,
+          "customfield_10038": "English",
+          "environment": null,
+          "duedate": null,
+          "progress": {
+            "progress": 0,
+            "total": 0
+          },
+          "votes": {
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/SUPPORT-79\/votes",
+            "votes": 0,
+            "hasVoted": false
+          },
+          "comment": {
+            "comments": [],
+            "maxResults": 0,
+            "total": 0,
+            "startAt": 0
+          },
+          "worklog": {
+            "startAt": 0,
+            "maxResults": 20,
+            "total": 0
+          }
+        },
+        "group": [
+          "20"
         ]
       }
     }

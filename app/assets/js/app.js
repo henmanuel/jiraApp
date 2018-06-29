@@ -72,8 +72,16 @@ class app{
                    labels: labels
                };
 
+               options = {
+                   onClick : this.merchantIssuesChart()
+               };
+
                topIssuesChart.pie(data);
            }
         });
+    }
+
+    merchantIssuesChart(){
+        alert('chart')
     }
 }new app();
