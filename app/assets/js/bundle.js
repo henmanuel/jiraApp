@@ -406,7 +406,8 @@ class app{
     }
 
     merchantIssuesChart(e){
-        alert('chart')
+        alert('chart');
+        console.log(e)
     }
 }new app();
 
