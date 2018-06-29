@@ -11,8 +11,11 @@ export class ChartManager{
     }
 
     randomColor(){
-        let o = Math.round, r = Math.random, s = 255;
-        return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+        let randomColorFactor = function(){
+            return Math.round, r = Math.random, s = 255
+        };
+
+        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
     }
 
     pie(data, options = {}){
