@@ -6,6 +6,22 @@ import {ConnectorService} from './ConnectorService'
 class app{
     constructor(){
         Project.list().then((projects)=>{
+            let appContent = document.getElementById(appUI.contentID);
+
+            Project.info(projects).then((project)=>{
+                let header = document.getElementById(appUI.headerID);
+
+                let projectIcon = document.createElement('div');
+                projectIcon.id = 'app-project-icon';
+                projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
+                header.appendChild(projectIcon);
+
+                let projectName = document.createElement('div');
+                projectName.id = 'app-project-name';
+                projectName.innerHTML = project.name;
+                header.appendChild(projectName);
+            });
+
             this.projects = projects;
             let projectsList = document.createElement('select');
 
@@ -23,7 +39,6 @@ class app{
                 }
             }
 
-            let appContent = document.getElementById(appUI.contentID);
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart()

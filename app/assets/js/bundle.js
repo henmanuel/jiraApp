@@ -333,6 +333,22 @@ __webpack_require__.r(__webpack_exports__);
 class app{
     constructor(){
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].list().then((projects)=>{
+            let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
+
+            _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].info(projects).then((project)=>{
+                let header = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].headerID);
+
+                let projectIcon = document.createElement('div');
+                projectIcon.id = 'app-project-icon';
+                projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
+                header.appendChild(projectIcon);
+
+                let projectName = document.createElement('div');
+                projectName.id = 'app-project-name';
+                projectName.innerHTML = project.name;
+                header.appendChild(projectName);
+            });
+
             this.projects = projects;
             let projectsList = document.createElement('select');
 
@@ -350,7 +366,6 @@ class app{
                 }
             }
 
-            let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart()
