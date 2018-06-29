@@ -64,7 +64,7 @@ class Cache
         ];
 
         $filename = CoreConfig::CACHE_PATH . DIRECTORY_SEPARATOR . $name . CoreConfig::CACHE_SUFFIX_FILE;
-        $handle = fopen($filename, 'r+');
+        $handle = fopen($filename, 'a');
         $success = fwrite($handle, json_encode($document, JSON_PRETTY_PRINT));
         fclose($handle);
 
