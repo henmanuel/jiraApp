@@ -21,7 +21,7 @@ class connectorService {
         project = project.charAt(0).toUpperCase() + project.slice(1);
 
         let request = {
-            'document' : 'issuesTop' + project.toUpperCase()
+            'document' : 'issuesTop' + project
         };
 
         return this.httpServiceAsync(request, this.getMethod);
