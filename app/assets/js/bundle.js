@@ -383,10 +383,10 @@ class app{
 
                data = {
                    datasets: [{
-                       data: data,
-                       labels: labels,
-                       backgroundColor : backgroundColor
-                   }]
+                       data: data
+                   }],
+                   labels: labels,
+                   backgroundColor : backgroundColor
                };
 
                topIssuesChart.pie(data)
