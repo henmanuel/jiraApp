@@ -4,7 +4,7 @@ require './CoreConfig.class.php';
 
 class WebHookIssuesTop
 {
-  const Document = 'issuesTop';
+  const Document = 'issuesTopSupport';
 
   function __construct()
   {
