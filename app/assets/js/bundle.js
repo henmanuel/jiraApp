@@ -357,10 +357,14 @@ class app{
     }
 
     topIssuesChart(){
-        let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
-        let topChartContent = document.createElement('div');
-        topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
-        appContent.appendChild(topChartContent);
+        let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
+
+        if(topChartContent == null){
+            let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
+            topChartContent = document.createElement('div');
+            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
+            appContent.appendChild(topChartContent);
+        }
 
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop().then((requestTypes)=>{

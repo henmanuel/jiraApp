@@ -37,10 +37,14 @@ class app{
     }
 
     topIssuesChart(){
-        let appContent = document.getElementById(appUI.contentID);
-        let topChartContent = document.createElement('div');
-        topChartContent.id = appUI.topContentChart;
-        appContent.appendChild(topChartContent);
+        let topChartContent = document.getElementById(appUI.topContentChart);
+
+        if(topChartContent == null){
+            let appContent = document.getElementById(appUI.contentID);
+            topChartContent = document.createElement('div');
+            topChartContent.id = appUI.topContentChart;
+            appContent.appendChild(topChartContent);
+        }
 
         appUI.elementLoad = appUI.topContentChart;
         ConnectorService.getIssuesTop().then((requestTypes)=>{
