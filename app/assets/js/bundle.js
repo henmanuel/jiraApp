@@ -397,7 +397,7 @@ class app{
                };
 
                options = {
-                   onClick : this.merchantIssuesChart()
+                   onClick : this.merchantIssuesChart
                };
 
                topIssuesChart.pie(data);
@@ -405,7 +405,7 @@ class app{
         });
     }
 
-    merchantIssuesChart(){
+    merchantIssuesChart(e){
         alert('chart')
     }
 }new app();
