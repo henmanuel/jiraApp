@@ -16,9 +16,9 @@ class connectorService {
         })
     }
 
-    getIssuesTop(){
+    getIssuesTop(project){
         let request = {
-            'document' : 'issuesTop'
+            'document' : 'issuesTop' + project.toUpperCase()
         };
 
         return this.httpServiceAsync(request, this.getMethod);
@@ -94,7 +94,7 @@ class connectorService {
                     dataResponse = JSON.parse(response.responseText);
                 }
 
-                resolve(dataResponse);
+                document.getElementById(appUI.contentID).innerHTML = dataResponse
             });
         })
     }

@@ -156,9 +156,9 @@ class connectorService {
         })
     }
 
-    getIssuesTop(){
+    getIssuesTop(project){
         let request = {
-            'document' : 'issuesTop'
+            'document' : 'issuesTop' + project.toUpperCase()
         };
 
         return this.httpServiceAsync(request, this.getMethod);
@@ -234,7 +234,7 @@ class connectorService {
                     dataResponse = JSON.parse(response.responseText);
                 }
 
-                resolve(dataResponse);
+                document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID).innerHTML = dataResponse
             });
         })
     }
@@ -367,7 +367,7 @@ class app{
         }
 
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
-        _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop().then((requestTypes)=>{
+        _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop(this.currentProject).then((requestTypes)=>{
            if(requestTypes){
                let topIssuesChart = new _ChartManager__WEBPACK_IMPORTED_MODULE_2__["ChartManager"]('topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
 
