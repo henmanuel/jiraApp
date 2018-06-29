@@ -50,20 +50,23 @@ class app{
 
                let data = [];
                let labels = [];
+               let backgroundColor = [];
                for(let key in requestTypes){
                    if(requestTypes.hasOwnProperty(key)){
                        let issues = Object.values(requestTypes[key]);
 
                        labels.push(key);
-                       data.push(issues.length)
+                       data.push(issues.length);
+                       backgroundColor.push(topIssuesChart.randomColor());
                    }
                }
 
                data = {
                    datasets: [{
-                       data: data
-                   }],
-                   labels: labels
+                       data: data,
+                       labels: labels,
+                       backgroundColor : backgroundColor
+                   }]
                };
 
                topIssuesChart.pie(data)

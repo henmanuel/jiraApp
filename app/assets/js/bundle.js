@@ -110,6 +110,11 @@ class ChartManager{
         this.chart = document.getElementById(name);
     }
 
+    randomColor(){
+        let o = Math.round, r = Math.random, s = 255;
+        return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    }
+
     pie(data, options = {}){
         new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
             type: 'pie',
@@ -365,20 +370,23 @@ class app{
 
                let data = [];
                let labels = [];
+               let backgroundColor = [];
                for(let key in requestTypes){
                    if(requestTypes.hasOwnProperty(key)){
                        let issues = Object.values(requestTypes[key]);
 
                        labels.push(key);
-                       data.push(issues.length)
+                       data.push(issues.length);
+                       backgroundColor.push(topIssuesChart.randomColor());
                    }
                }
 
                data = {
                    datasets: [{
-                       data: data
-                   }],
-                   labels: labels
+                       data: data,
+                       labels: labels,
+                       backgroundColor : backgroundColor
+                   }]
                };
 
                topIssuesChart.pie(data)

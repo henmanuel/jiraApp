@@ -10,6 +10,11 @@ export class ChartManager{
         this.chart = document.getElementById(name);
     }
 
+    randomColor(){
+        let o = Math.round, r = Math.random, s = 255;
+        return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+    }
+
     pie(data, options = {}){
         new Chart(this.chart,{
             type: 'pie',
