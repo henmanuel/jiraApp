@@ -81,7 +81,7 @@ class app{
                        let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
 
                        try{
-                           req = activeElements[0]['_model']['label'];
+                           req = activeElements["0"]._model.label;
                        }catch(err){
                            req = false;
                        }
