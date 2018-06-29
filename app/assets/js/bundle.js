@@ -112,7 +112,7 @@ class ChartManager{
 
     randomColor(){
         let randomColorFactor = function(){
-            return Math.round, r = Math.random, s = 255
+            return Math.round(Math.random() * 255);
         };
 
         return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
