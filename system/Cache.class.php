@@ -54,9 +54,9 @@ class Cache
      */
     public static function loadDocument($name, $document, $expiredDays = null)
     {
-      if(!is_dir(CoreConfig::CACHE_PATH)){
-        mkdir('./' . CoreConfig::CACHE_PATH);
-      }
+        if(!is_dir('./' . CoreConfig::CACHE_PATH)){
+          mkdir('./' . CoreConfig::CACHE_PATH);
+        }
 
         if($expiredDays !== false){
             $expiredDays = ($expiredDays) ? $expiredDays : CoreConfig::CACHE_EXPIRED_DAYS;
