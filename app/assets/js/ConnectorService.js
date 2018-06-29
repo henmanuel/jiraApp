@@ -91,11 +91,12 @@ class connectorService {
                 resolve(response);
             }).fail(function(response){
                 let dataResponse = 'A error as occurred';
-                document.getElementById(appUI.contentID).innerHTML = dataResponse;
 
                 if(response.responseText){
                     dataResponse = JSON.parse(response.responseText);
                     resolve(dataResponse)
+                }else{
+                    document.getElementById(appUI.contentID).innerHTML = dataResponse;
                 }
             });
         })
