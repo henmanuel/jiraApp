@@ -45,6 +45,7 @@ class app{
         Project.info(this.currentProject.key).then((project)=>{
             let header = document.getElementById(appUI.headerID);
 
+            header.innerHTML = null;
             let projectIcon = document.createElement('div');
             projectIcon.id = 'app-project-icon';
             projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
