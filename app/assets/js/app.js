@@ -4,7 +4,7 @@ import {ChartManager} from './ChartManager'
 import {ConnectorService} from './ConnectorService'
 
 class app {
-    constructor() {
+    constructor(){
         Project.list().then((projects)=>{
             let appContent = document.getElementById(appUI.contentID);
 
@@ -40,7 +40,7 @@ class app {
         });
     }
 
-    projectInfo() {
+    projectInfo(){
         appUI.elementLoad = appUI.headerID;
         Project.info(this.currentProject.key).then((project)=>{
             let header = document.getElementById(appUI.headerID);
@@ -58,7 +58,7 @@ class app {
         });
     }
 
-    topIssuesChart() {
+    topIssuesChart(){
         let topChartContent = document.getElementById(appUI.topContentChart);
 
         if(topChartContent == null){

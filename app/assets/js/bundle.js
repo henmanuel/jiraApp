@@ -335,7 +335,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class app {
-    constructor() {
+    constructor(){
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].list().then((projects)=>{
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
 
@@ -371,7 +371,7 @@ class app {
         });
     }
 
-    projectInfo() {
+    projectInfo(){
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].headerID;
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].info(this.currentProject.key).then((project)=>{
             let header = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].headerID);
@@ -389,7 +389,7 @@ class app {
         });
     }
 
-    topIssuesChart() {
+    topIssuesChart(){
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
 
         if(topChartContent == null){
