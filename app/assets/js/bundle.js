@@ -446,8 +446,7 @@ class app {
             }
         });
     }
-}
-new app();
+}new app();
 
 
 /***/ }),
