@@ -383,7 +383,7 @@ class app {
             header.appendChild(projectIcon);
 
             let projectName = document.createElement('a');
-            projectName.href = project.self;
+            projectName.href = '/projects/' + project;
             projectName.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].projectName;
             projectName.innerHTML = project.name;
             header.appendChild(projectName);
