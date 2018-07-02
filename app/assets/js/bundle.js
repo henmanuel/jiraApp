@@ -372,6 +372,7 @@ class app{
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].info(this.currentProject.key).then((project)=>{
             let header = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].headerID);
 
+            header.innerHTML = null;
             let projectIcon = document.createElement('div');
             projectIcon.id = 'app-project-icon';
             projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
@@ -442,6 +443,7 @@ class app{
         });
     }
 }new app();
+
 
 /***/ }),
 
