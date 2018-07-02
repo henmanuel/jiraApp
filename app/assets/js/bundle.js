@@ -379,7 +379,7 @@ class app{
             header.innerHTML = null;
             let projectIcon = document.createElement('div');
             projectIcon.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].projectIcon;
-            projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
+            projectIcon.innerHTML = `<img src="${project.avatarUrls['16x16']}"/>`;
             header.appendChild(projectIcon);
 
             let projectName = document.createElement('div');

@@ -48,7 +48,7 @@ class app{
             header.innerHTML = null;
             let projectIcon = document.createElement('div');
             projectIcon.id = appUI.projectIcon;
-            projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
+            projectIcon.innerHTML = `<img src="${project.avatarUrls['16x16']}"/>`;
             header.appendChild(projectIcon);
 
             let projectName = document.createElement('div');
