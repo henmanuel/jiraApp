@@ -110,6 +110,14 @@ class ChartManager{
         this.chart = document.getElementById(name);
     }
 
+    chart(type, data, options){
+        this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
+            type: type,
+            data: data,
+            options: options
+        });
+    }
+
     randomColor(){
         let randomColorFactor = function(){
             return Math.round(Math.random() * 255);
@@ -119,11 +127,7 @@ class ChartManager{
     }
 
     pie(data, options = {}){
-        this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
-            type: 'pie',
-            data: data,
-            options: options
-        });
+        this.chart('pie', data, options)
     }
 }
 

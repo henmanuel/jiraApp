@@ -10,6 +10,14 @@ export class ChartManager{
         this.chart = document.getElementById(name);
     }
 
+    chart(type, data, options){
+        this.chartNode = new Chart(this.chart,{
+            type: type,
+            data: data,
+            options: options
+        });
+    }
+
     randomColor(){
         let randomColorFactor = function(){
             return Math.round(Math.random() * 255);
@@ -19,10 +27,6 @@ export class ChartManager{
     }
 
     pie(data, options = {}){
-        this.chartNode = new Chart(this.chart,{
-            type: 'pie',
-            data: data,
-            options: options
-        });
+        this.chart('pie', data, options)
     }
 }
