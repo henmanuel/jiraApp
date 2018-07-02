@@ -110,7 +110,7 @@ class ChartManager{
         this.chart = document.getElementById(name);
     }
 
-    chart(type, data, options){
+    newChart(type, data, options){
         this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
             type: type,
             data: data,
@@ -127,7 +127,7 @@ class ChartManager{
     }
 
     pie(data, options = {}){
-        this.chart('pie', data, options)
+        this.newChart('pie', data, options)
     }
 }
 

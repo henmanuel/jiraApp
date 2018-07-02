@@ -10,7 +10,7 @@ export class ChartManager{
         this.chart = document.getElementById(name);
     }
 
-    chart(type, data, options){
+    newChart(type, data, options){
         this.chartNode = new Chart(this.chart,{
             type: type,
             data: data,
@@ -27,6 +27,6 @@ export class ChartManager{
     }
 
     pie(data, options = {}){
-        this.chart('pie', data, options)
+        this.newChart('pie', data, options)
     }
 }
