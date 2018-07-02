@@ -382,8 +382,7 @@ class app {
             projectIcon.innerHTML = `<img src="${project.avatarUrls['16x16']}"/>`;
             header.appendChild(projectIcon);
 
-            let projectName = document.createElement('a');
-            projectName.href = '/projects/' + project.key;
+            let projectName = document.createElement('div');
             projectName.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].projectName;
             projectName.innerHTML = project.name;
             header.appendChild(projectName);
