@@ -346,7 +346,7 @@ class app {
                 let option = document.createElement('option');
 
                 if(projects.hasOwnProperty(key)){
-                    if(key == 0){
+                    if(key === 0){
                         this.currentProject = projects[key];
                     }
 
