@@ -3,8 +3,8 @@ import {Project} from './Project'
 import {ChartManager} from './ChartManager'
 import {ConnectorService} from './ConnectorService'
 
-class app{
-    constructor(){
+class app {
+    constructor() {
         Project.list().then((projects)=>{
             let appContent = document.getElementById(appUI.contentID);
 
@@ -40,7 +40,7 @@ class app{
         });
     }
 
-    projectInfo(){
+    projectInfo() {
         appUI.elementLoad = appUI.headerID;
         Project.info(this.currentProject.key).then((project)=>{
             let header = document.getElementById(appUI.headerID);
@@ -58,7 +58,7 @@ class app{
         });
     }
 
-    topIssuesChart(){
+    topIssuesChart() {
         let topChartContent = document.getElementById(appUI.topContentChart);
 
         if(topChartContent == null){
@@ -70,49 +70,50 @@ class app{
 
         appUI.elementLoad = appUI.topContentChart;
         ConnectorService.getIssuesTop(this.currentProject.key).then((requestTypes)=>{
-           if(requestTypes){
-               let topIssuesChart = new ChartManager('topChart', appUI.topContentChart);
+            if(requestTypes){
+                let topIssuesChart = new ChartManager('topChart', appUI.topContentChart);
 
-               let data = [];
-               let labels = [];
-               let backgroundColor = [];
-               for(let key in requestTypes){
-                   if(requestTypes.hasOwnProperty(key)){
-                       let issues = Object.values(requestTypes[key]);
+                let data = [];
+                let labels = [];
+                let backgroundColors = [];
+                for(let key in requestTypes){
+                    if(requestTypes.hasOwnProperty(key)){
+                        let issues = Object.values(requestTypes[key]);
 
-                       labels.push(key);
-                       data.push(issues.length);
-                       backgroundColor.push(topIssuesChart.randomColor());
-                   }
-               }
+                        labels.push(key);
+                        data.push(issues.length);
+                        backgroundColors.push(topIssuesChart.randomColor());
+                    }
+                }
 
-               data = {
-                   datasets: [{
-                       data: data,
-                       backgroundColor : backgroundColor
-                   }],
-                   labels: labels
-               };
+                data = {
+                    datasets: [{
+                        data: data,
+                        backgroundColor: backgroundColors
+                    }],
+                    labels: labels
+                };
 
-               let options = {
-                   onClick : (e)=>{
-                       let req;
-                       let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
+                let options = {
+                    onClick: (e)=>{
+                        let req;
+                        let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
 
-                       try{
-                           req = activeElement["0"]._model.label;
-                       }catch(err){
-                           req = false;
-                       }
+                        try{
+                            req = activeElement["0"]._model.label;
+                        }catch(err){
+                            req = false;
+                        }
 
-                       if(req){
-                           alert(req)
-                       }
-                   }
-               };
+                        if(req){
+                            alert(req)
+                        }
+                    }
+                };
 
-               topIssuesChart.pie(data, options);
-           }
+                topIssuesChart.pie(data, options);
+            }
         });
     }
-}new app();
+}
+new app();

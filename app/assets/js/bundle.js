@@ -334,8 +334,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class app{
-    constructor(){
+class app {
+    constructor() {
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].list().then((projects)=>{
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
 
@@ -371,7 +371,7 @@ class app{
         });
     }
 
-    projectInfo(){
+    projectInfo() {
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].headerID;
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].info(this.currentProject.key).then((project)=>{
             let header = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].headerID);
@@ -389,7 +389,7 @@ class app{
         });
     }
 
-    topIssuesChart(){
+    topIssuesChart() {
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
 
         if(topChartContent == null){
@@ -401,52 +401,53 @@ class app{
 
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop(this.currentProject.key).then((requestTypes)=>{
-           if(requestTypes){
-               let topIssuesChart = new _ChartManager__WEBPACK_IMPORTED_MODULE_2__["ChartManager"]('topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
+            if(requestTypes){
+                let topIssuesChart = new _ChartManager__WEBPACK_IMPORTED_MODULE_2__["ChartManager"]('topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
 
-               let data = [];
-               let labels = [];
-               let backgroundColor = [];
-               for(let key in requestTypes){
-                   if(requestTypes.hasOwnProperty(key)){
-                       let issues = Object.values(requestTypes[key]);
+                let data = [];
+                let labels = [];
+                let backgroundColors = [];
+                for(let key in requestTypes){
+                    if(requestTypes.hasOwnProperty(key)){
+                        let issues = Object.values(requestTypes[key]);
 
-                       labels.push(key);
-                       data.push(issues.length);
-                       backgroundColor.push(topIssuesChart.randomColor());
-                   }
-               }
+                        labels.push(key);
+                        data.push(issues.length);
+                        backgroundColors.push(topIssuesChart.randomColor());
+                    }
+                }
 
-               data = {
-                   datasets: [{
-                       data: data,
-                       backgroundColor : backgroundColor
-                   }],
-                   labels: labels
-               };
+                data = {
+                    datasets: [{
+                        data: data,
+                        backgroundColor: backgroundColors
+                    }],
+                    labels: labels
+                };
 
-               let options = {
-                   onClick : (e)=>{
-                       let req;
-                       let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
+                let options = {
+                    onClick: (e)=>{
+                        let req;
+                        let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
 
-                       try{
-                           req = activeElement["0"]._model.label;
-                       }catch(err){
-                           req = false;
-                       }
+                        try{
+                            req = activeElement["0"]._model.label;
+                        }catch(err){
+                            req = false;
+                        }
 
-                       if(req){
-                           alert(req)
-                       }
-                   }
-               };
+                        if(req){
+                            alert(req)
+                        }
+                    }
+                };
 
-               topIssuesChart.pie(data, options);
-           }
+                topIssuesChart.pie(data, options);
+            }
         });
     }
-}new app();
+}
+new app();
 
 
 /***/ }),
