@@ -378,12 +378,12 @@ class app{
 
             header.innerHTML = null;
             let projectIcon = document.createElement('div');
-            projectIcon.id = 'app-project-icon';
+            projectIcon.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].projectIcon;
             projectIcon.innerHTML = '<img src="' + project.avatarUrls['16x16'] + '"/>';
             header.appendChild(projectIcon);
 
             let projectName = document.createElement('div');
-            projectName.id = 'app-project-name';
+            projectName.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].projectName;
             projectName.innerHTML = project.name;
             header.appendChild(projectName);
         });
@@ -465,6 +465,8 @@ __webpack_require__.r(__webpack_exports__);
 
     headerID: 'app-header',
     contentID: 'app-content',
+    projectIcon: 'app-project-icon',
+    projectName: 'app-project-name',
     topContentChart: 'app-content-top-chart'
 });
 
