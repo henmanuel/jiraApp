@@ -52,7 +52,7 @@ class app {
             header.appendChild(projectIcon);
 
             let projectName = document.createElement('a');
-            projectName.href = '/projects/' + project;
+            projectName.href = '/projects/' + project.key;
             projectName.id = appUI.projectName;
             projectName.innerHTML = project.name;
             header.appendChild(projectName);
