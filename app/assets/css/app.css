@@ -3,6 +3,10 @@
     height: 100px;
 }
 
+#app-project-icon{
+    height: 30px;
+}
+
 #app-content{
     height: 600px;
 }
