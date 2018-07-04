@@ -105,19 +105,19 @@ class app {
     }
 
     topIssuesChart(){
-        let topChartContent = document.getElementById(appUI.topContentChart);
+        let topChartContent = document.getElementById(appUI.topIssuesContentChart);
 
         if(topChartContent == null){
             let appContent = document.getElementById(appUI.contentID);
             topChartContent = document.createElement('div');
-            topChartContent.id = appUI.topContentChart;
+            topChartContent.id = appUI.topIssuesContentChart;
             appContent.appendChild(topChartContent);
         }
 
-        appUI.elementLoad = appUI.topContentChart;
+        appUI.elementLoad = appUI.topIssuesContentChart;
         ConnectorService.getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
-                let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topContentChart, (type)=>{
+                let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
                     alert(type)
                 });
 
@@ -127,23 +127,23 @@ class app {
     }
 
     topCompaniesIssues(){
-        let topChartContent = document.getElementById(appUI.topContentChart);
+        let topChartContent = document.getElementById(appUI.topCompaniesContentChart);
 
         if(topChartContent == null){
             let appContent = document.getElementById(appUI.contentID);
             topChartContent = document.createElement('div');
-            topChartContent.id = appUI.topContentChart;
+            topChartContent.id = appUI.topCompaniesContentChart;
             appContent.appendChild(topChartContent);
         }
 
-        appUI.elementLoad = appUI.topContentChart;
+        appUI.elementLoad = appUI.topCompaniesContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topContentChart, (option)=>{
+                let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
                     let branchs = companies[option];
-                    let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', appUI.topContentChart, (key)=>{
+                    let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
                         let issues = branchs[key];
-                        let topIssuesChart = this.newChart(issues, 'topIssuesChart', appUI.topContentChart, (issue)=>{
+                        let topIssuesChart = this.newChart(issues, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
                             alert(issue)
                         });
 

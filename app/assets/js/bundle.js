@@ -449,19 +449,19 @@ class app {
     }
 
     topIssuesChart(){
-        let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
+        let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
 
         if(topChartContent == null){
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
             topChartContent = document.createElement('div');
-            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
+            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
             appContent.appendChild(topChartContent);
         }
 
-        _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
+        _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
-                let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (type)=>{
+                let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
                     alert(type)
                 });
 
@@ -471,23 +471,23 @@ class app {
     }
 
     topCompaniesIssues(){
-        let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
+        let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart);
 
         if(topChartContent == null){
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
             topChartContent = document.createElement('div');
-            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
+            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
             appContent.appendChild(topChartContent);
         }
 
-        _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
+        _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (option)=>{
+                let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
                     let branchs = companies[option];
-                    let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (key)=>{
+                    let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (key)=>{
                         let issues = branchs[key];
-                        let topIssuesChart = this.newChart(issues, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (issue)=>{
+                        let topIssuesChart = this.newChart(issues, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
                             alert(issue)
                         });
 
@@ -522,7 +522,8 @@ __webpack_require__.r(__webpack_exports__);
     contentID: 'app-content',
     projectIcon: 'app-project-icon',
     projectName: 'app-project-name',
-    topContentChart: 'app-content-top-chart'
+    topIssuesContentChart: 'app--top-issues-chart',
+    topCompaniesContentChart: 'app--top-companies-chart'
 });
 
 /***/ }),

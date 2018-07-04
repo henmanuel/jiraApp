@@ -5,5 +5,6 @@ export default{
     contentID: 'app-content',
     projectIcon: 'app-project-icon',
     projectName: 'app-project-name',
-    topContentChart: 'app-content-top-chart'
+    topIssuesContentChart: 'app--top-issues-chart',
+    topCompaniesContentChart: 'app--top-companies-chart'
 }
