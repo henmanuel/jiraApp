@@ -4,7 +4,8 @@ require './CoreConfig.class.php';
 
 class WebHookIssuesTop
 {
-  const Document = 'issuesTopSupport';
+  const Issues = 'issuesTopSupport';
+  const Companies = 'companyIssuesTopSupport';
 
   function __construct()
   {
@@ -33,16 +34,27 @@ class WebHookIssuesTop
     $request['self'] = $issue['self'];
     $request['group'] = $issue['fields']['customfield_10013']['requestType']['groupIds'];
 
-    $currentDocument = Cache::getDocument(self::Document);
+    $issuesDocument = Cache::getDocument(self::Issues);
+    $companiesDocument = Cache::getDocument(self::Companies);
 
-    if($currentDocument){
-      $currentDocument[$company][$brand][$type][$issue['id']] = $request;
-      $document = $currentDocument;
+    if($companiesDocument){
+      $companiesDocument[$company][$brand][$type][$issue['id']] = $request;
+      $companies = $companiesDocument;
     }else{
-      $document = [$company => [$brand => [$type => [$issue['id'] = $request]]]];
+      $companies = [$company => [$brand => [$type => [$issue['id'] = $request]]]];
     }
 
-    return Cache::loadDocument(self::Document, $document, false);
+    if($issuesDocument){
+      $issuesDocument[$type][$issue['id']] = $request;
+      $issues = $issuesDocument;
+    }else{
+      $issues = [$type => [$issue['id'] = $request]];
+    }
+
+    $issues = Cache::loadDocument(self::Issues, $issues, false);
+    $companies = Cache::loadDocument(self::Companies, $companies, false);
+
+    return ($issues && $companies);
   }
 }
 
