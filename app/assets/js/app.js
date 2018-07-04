@@ -173,10 +173,11 @@ class app {
         appUI.elementLoad = appUI.topContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let topCompaniesIssuesChart = this.newChart('topChart', appUI.topContentChart);
-                topCompaniesIssuesChart.pie((option)=>{
+                let topCompaniesIssuesChart = this.newChart(companies, 'topChart', appUI.topContentChart, (option)=>{
                     alert(option)
                 });
+
+                topCompaniesIssuesChart.pie();
             }
         });
     }

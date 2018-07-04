@@ -517,10 +517,11 @@ class app {
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let topCompaniesIssuesChart = this.newChart('topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart);
-                topCompaniesIssuesChart.pie((option)=>{
+                let topCompaniesIssuesChart = this.newChart(companies, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (option)=>{
                     alert(option)
                 });
+
+                topCompaniesIssuesChart.pie();
             }
         });
     }
