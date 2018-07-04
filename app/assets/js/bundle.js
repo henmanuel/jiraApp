@@ -527,7 +527,7 @@ class app {
                     let backOp = document.createElement('span');
                     backOp.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                     backOp.innerText = 'Back';
-                    backOp.addEventListener(this.backChart());
+                    backOp.addEventListener('click', this.backChart());
                     titleChart.appendChild(backOp);
                     let branchs = companies[option];
 

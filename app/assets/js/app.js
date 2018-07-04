@@ -183,7 +183,7 @@ class app {
                     let backOp = document.createElement('span');
                     backOp.id = appUI.chartBackOption;
                     backOp.innerText = 'Back';
-                    backOp.addEventListener(this.backChart());
+                    backOp.addEventListener('click', this.backChart());
                     titleChart.appendChild(backOp);
                     let branchs = companies[option];
 
