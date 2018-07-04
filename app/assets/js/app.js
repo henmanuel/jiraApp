@@ -148,6 +148,7 @@ class app {
 
     topCompaniesIssues(){
         let appContent = document.getElementById(appUI.contentID);
+        let backOption = document.getElementById(appUI.chartBackOption);
         let chartContainer = document.getElementById(appUI.chartContainerCompanies);
         let topChartContent = document.getElementById(appUI.topCompaniesContentChart);
         let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
@@ -177,7 +178,10 @@ class app {
                 titleChart.innerText = 'Companies issues';
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
                     titleChart.innerText = option;
-                    titleChart.appendChild('<span>back</span>');
+                    let backOp = document.createElement('span');
+                    backOp.id = appUI.chartBackOption;
+                    backOp.innerText = 'Back';
+                    titleChart.appendChild(backOp);
                     let branchs = companies[option];
 
                     let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
