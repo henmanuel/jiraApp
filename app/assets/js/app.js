@@ -70,7 +70,7 @@ class app {
 
                 labels.push(key);
                 data.push(issues.length);
-                backgroundColors.push(ChartManager.randomColor());
+                backgroundColors.push(contentChart.randomColor());
             }
         }
 
