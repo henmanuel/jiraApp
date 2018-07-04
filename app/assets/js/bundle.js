@@ -381,15 +381,16 @@ class app {
             appContent.appendChild(projectsList);
 
             let chartType = document.createElement('select');
-            let chartOption = document.createElement('option');
 
-            chartOption.value = 'companies';
-            chartOption.text = 'Companies';
-            chartType.add(chartOption);
+            let companiesOption = document.createElement('option');
+            companiesOption.value = 'companies';
+            companiesOption.text = 'Companies';
+            chartType.add(companiesOption);
 
-            chartOption.value = 'issues';
-            chartOption.text = 'Issues Types';
-            chartType.add(chartOption);
+            let issuesOption = document.createElement('option');
+            issuesOption.value = 'issues';
+            issuesOption.text = 'Issues Types';
+            chartType.add(issuesOption);
 
             appContent.appendChild(chartType);
 
