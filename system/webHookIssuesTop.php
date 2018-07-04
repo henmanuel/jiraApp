@@ -45,7 +45,7 @@ class WebHookIssuesTop
         $company => [
           $brand => [
             $type => [
-              $issue['id'] = $request
+              $issue['id'] => $request
             ]
           ]
         ]
@@ -58,7 +58,7 @@ class WebHookIssuesTop
     }else{
       $issues = [
         $type => [
-          $issue['id'] = $request
+          $issue['id'] => $request
         ]
       ];
     }
