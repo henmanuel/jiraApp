@@ -29,6 +29,6 @@ export class ChartManager{
     }
 
     pie(){
-        this.newChart('polarArea', this.data, this.options)
+        this.newChart('pie', this.data, this.options)
     }
 }
