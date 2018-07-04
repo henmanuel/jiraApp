@@ -39,6 +39,17 @@
             ]
           }
         }
+      },
+      "Malta": {
+        "Crypto": {
+          "10118": {
+            "key": "SUPPORT-110",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10118",
+            "group": [
+              "17"
+            ]
+          }
+        }
       }
     },
     "Poker": {
@@ -47,6 +58,19 @@
           "10117": {
             "key": "SUPPORT-109",
             "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10117",
+            "group": [
+              "17"
+            ]
+          }
+        }
+      }
+    },
+    "Bingo": {
+      "AmigoBingo": {
+        "Status": {
+          "10119": {
+            "key": "SUPPORT-111",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10119",
             "group": [
               "17"
             ]
