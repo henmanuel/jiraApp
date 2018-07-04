@@ -19,6 +19,11 @@
     float: left;
 }
 
+#app-select-projects-list{
+    float: left;
+    width: 100%;
+}
+
 #app-top-issues-chart, #app-top-companies-chart{
     width: 40%;
     float: left;
