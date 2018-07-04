@@ -107,7 +107,9 @@ class app {
         return contentChart
     }
 
-
+    backChart(){
+        this.currentChart.pie()
+    }
 
     topIssuesChart(){
         let appContent = document.getElementById(appUI.contentID);
@@ -181,6 +183,7 @@ class app {
                     let backOp = document.createElement('span');
                     backOp.id = appUI.chartBackOption;
                     backOp.innerText = 'Back';
+                    backOp.addEventListener(this.backChart());
                     titleChart.appendChild(backOp);
                     let branchs = companies[option];
 
@@ -192,13 +195,16 @@ class app {
                             titleChart.innerText = issue;
                         });
 
-                        topIssuesChart.pie()
+                        topIssuesChart.pie();
+                        this.currentChart = topIssuesChart;
                     });
 
-                    topBranchIssuesChart.pie()
+                    topBranchIssuesChart.pie();
+                    this.currentChart = topBranchIssuesChart;
                 });
 
                 topCompaniesIssuesChart.pie();
+                this.currentChart = topCompaniesIssuesChart;
             }
         });
     }

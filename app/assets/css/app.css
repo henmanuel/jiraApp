@@ -29,6 +29,10 @@
     float: left;
 }
 
+#app-chart-back-option{
+    float: right;
+}
+
 #app-top-issues-chart-title, #app-top-companies-chart-title{
     width: 100%;
     float: left;
