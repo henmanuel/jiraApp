@@ -139,12 +139,19 @@ class app {
         appUI.elementLoad = appUI.topCompaniesContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
+                let titleChart = document.createElement('div');
+                titleChart.id = appUI.topCompaniesContentChart + '-title';
+
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
+                    titleChart.innerText = 'Companies issues';
                     let branchs = companies[option];
+
                     let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
                         let issues = branchs[key];
+                        titleChart.innerText = key;
                         let topIssuesChart = this.newChart(issues, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
-                            alert(issue)
+                            alert(issue);
+                            titleChart.innerText = issue;
                         });
 
                         topIssuesChart.pie()
