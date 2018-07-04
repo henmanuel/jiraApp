@@ -127,18 +127,20 @@ class app {
     }
 
     topCompaniesIssues(){
+        let appContent = document.getElementById(appUI.contentID);
         let topChartContent = document.getElementById(appUI.topCompaniesContentChart);
+        let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
 
         if(topChartContent == null){
-            let appContent = document.getElementById(appUI.contentID);
-
-            let titleChart = document.createElement('div');
-            titleChart.id = appUI.topCompaniesContentChart + '-title';
-            appContent.appendChild(titleChart);
-
             topChartContent = document.createElement('div');
             topChartContent.id = appUI.topCompaniesContentChart;
             appContent.appendChild(topChartContent);
+        }
+
+        if(titleChart == null){
+            titleChart = document.createElement('div');
+            titleChart.id = appUI.topCompaniesContentChart + '-title';
+            appContent.appendChild(titleChart);
         }
 
         appUI.elementLoad = appUI.topCompaniesContentChart;
