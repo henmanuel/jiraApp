@@ -453,20 +453,20 @@ class app {
 
     topIssuesChart(){
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
-        let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainer);
+        let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerIssues);
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
         let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title');
-
-        if(titleChart == null){
-            titleChart = document.createElement('div');
-            titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title';
-            appContent.appendChild(titleChart);
-        }
 
         if(chartContainer == null){
             chartContainer = document.createElement('div');
             chartContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainer;
             appContent.appendChild(chartContainer);
+        }
+
+        if(titleChart == null){
+            titleChart = document.createElement('div');
+            titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title';
+            chartContainer.appendChild(titleChart);
         }
 
         if(topChartContent == null){
@@ -490,20 +490,20 @@ class app {
 
     topCompaniesIssues(){
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
-        let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainer);
+        let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies);
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart);
         let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title');
-
-        if(titleChart == null){
-            titleChart = document.createElement('div');
-            titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title';
-            appContent.appendChild(titleChart);
-        }
 
         if(chartContainer == null){
             chartContainer = document.createElement('div');
             chartContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainer;
             appContent.appendChild(chartContainer);
+        }
+
+        if(titleChart == null){
+            titleChart = document.createElement('div');
+            titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title';
+            chartContainer.appendChild(titleChart);
         }
 
         if(topChartContent == null){
@@ -558,7 +558,8 @@ __webpack_require__.r(__webpack_exports__);
     contentID: 'app-content',
     projectIcon: 'app-project-icon',
     projectName: 'app-project-name',
-    chartContainer : 'app-chart-container',
+    chartContainerIssues : 'app-container-issues',
+    chartContainerCompanies : 'app-container-Companies',
     selectContainer: 'app-select-projects-list',
     topIssuesContentChart: 'app-top-issues-chart',
     topCompaniesContentChart: 'app-top-companies-chart'

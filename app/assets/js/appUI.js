@@ -5,7 +5,8 @@ export default{
     contentID: 'app-content',
     projectIcon: 'app-project-icon',
     projectName: 'app-project-name',
-    chartContainer : 'app-chart-container',
+    chartContainerIssues : 'app-container-issues',
+    chartContainerCompanies : 'app-container-Companies',
     selectContainer: 'app-select-projects-list',
     topIssuesContentChart: 'app-top-issues-chart',
     topCompaniesContentChart: 'app-top-companies-chart'
