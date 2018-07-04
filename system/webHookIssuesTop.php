@@ -24,7 +24,7 @@ class WebHookIssuesTop
     $data = file_get_contents('php://input');
     $data = json_decode($data, true);
 
-    $issue['self'] = $data['issue'];
+    $issue = $data['issue'];
     $company = $issue['fields']['customfield_10070']['value'];
     $brand = $issue['fields']['customfield_10070']['value']['child'];
     $type = $issue['fields']['customfield_10013']['requestType']['name'];
@@ -37,9 +37,9 @@ class WebHookIssuesTop
 
     if($currentDocument){
       $currentDocument[$company][$brand][$type][$issue['id']] = $request;
-      $document = $data;
+      $document = $currentDocument;
     }else{
-      $document = $data;
+      $document = [$company => [$brand => [$type => [$issue['id'] = $request]]]];
     }
 
     return Cache::loadDocument(self::Document, $document, false);
