@@ -58,6 +58,50 @@ class app {
         });
     }
 
+    newChart(dataValues, name, container, action){
+        let contentChart = new ChartManager(name, container);
+
+        let data = [];
+        let labels = [];
+        let backgroundColors = [];
+        for(let key in dataValues){
+            if(dataValues.hasOwnProperty(key)){
+                let issues = Object.values(dataValues[key]);
+
+                labels.push(key);
+                data.push(issues.length);
+                backgroundColors.push(ChartManager.randomColor());
+            }
+        }
+
+        contentChart.data = {
+            datasets: [{
+                data: data,
+                backgroundColor: backgroundColors
+            }],
+            labels: labels
+        };
+
+        contentChart.options = {
+            onClick: (e)=>{
+                let req;
+                let activeElement = contentChart.chartNode.getElementAtEvent(e);
+
+                try{
+                    req = activeElement["0"]._model.label;
+                }catch(err){
+                    req = false;
+                }
+
+                if(req){
+                    action(req)
+                }
+            }
+        };
+
+        return contentChart
+    }
+
     topIssuesChart(){
         let topChartContent = document.getElementById(appUI.topContentChart);
 
@@ -129,68 +173,10 @@ class app {
         appUI.elementLoad = appUI.topContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let topCompaniesIssuesChart = new ChartManager('topChart', appUI.topContentChart);
-
-                let data = [];
-                let labels = [];
-                let backgroundColors = [];
-                for(let key in companies){
-                    if(companies.hasOwnProperty(key)){
-                        let issues = Object.values(companies[key]);
-
-                        labels.push(key);
-                        data.push(issues.length);
-                        backgroundColors.push(topCompaniesIssuesChart.randomColor());
-                    }
-                }
-
-                data = {
-                    datasets: [{
-                        data: data,
-                        backgroundColor: backgroundColors
-                    }],
-                    labels: labels
-                };
-
-                let options = {
-                    onClick: (e)=>{
-                        let req;
-                        let activeElement = topCompaniesIssuesChart.chartNode.getElementAtEvent(e);
-
-                        try{
-                            req = activeElement["0"]._model.label;
-                        }catch(err){
-                            req = false;
-                        }
-
-                        if(req){
-                            let data = [];
-                            let labels = [];
-                            let backgroundColors = [];
-                            for(let key in companies[req]){
-                                if(companies[req].hasOwnProperty(key)){
-                                    let issues = Object.values(companies[req]);
-
-                                    labels.push(key);
-                                    data.push(issues.length);
-                                    backgroundColors.push(topCompaniesIssuesChart.randomColor());
-                                }
-                            }
-
-                            data = {
-                                datasets: [{
-                                    data: data,
-                                    backgroundColor: backgroundColors
-                                }],
-                                labels: labels
-                            };
-
-                            topCompaniesIssuesChart.pie(data, options);
-                        }
-                    }
-                };
-
-                topCompaniesIssuesChart.pie(data, options);
+                let topCompaniesIssuesChart = this.newChart('topChart', appUI.topContentChart);
+                topCompaniesIssuesChart.pie((option)=>{
+                    alert(option)
+                });
             }
         });
     }

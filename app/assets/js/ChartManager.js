@@ -2,6 +2,8 @@ import Chart from 'chart.js'
 
 export class ChartManager{
     constructor(name, container){
+        this.data = {};
+        this.options = {};
         let chartContent = document.getElementById(container);
 
         chartContent.innerHTML = null;
@@ -26,7 +28,7 @@ export class ChartManager{
         return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ', 0.5)';
     }
 
-    pie(data, options = {}){
-        this.newChart('pie', data, options)
+    pie(){
+        this.newChart('pie', this.data, this.options)
     }
 }
