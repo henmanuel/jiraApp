@@ -105,18 +105,26 @@ class app {
     }
 
     topIssuesChart(){
+        let appContent = document.getElementById(appUI.contentID);
         let topChartContent = document.getElementById(appUI.topIssuesContentChart);
+        let titleChart = document.getElementById(appUI.topIssuesContentChart + '-title');
 
         if(topChartContent == null){
-            let appContent = document.getElementById(appUI.contentID);
             topChartContent = document.createElement('div');
             topChartContent.id = appUI.topIssuesContentChart;
             appContent.appendChild(topChartContent);
         }
 
+        if(titleChart == null){
+            titleChart = document.createElement('div');
+            titleChart.id = appUI.topIssuesContentChart + '-title';
+            appContent.appendChild(titleChart);
+        }
+
         appUI.elementLoad = appUI.topIssuesContentChart;
         ConnectorService.getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
+                titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
                     alert(type)
                 });

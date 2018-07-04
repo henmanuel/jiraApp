@@ -449,18 +449,26 @@ class app {
     }
 
     topIssuesChart(){
+        let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
+        let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title');
 
         if(topChartContent == null){
-            let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
             topChartContent = document.createElement('div');
             topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
             appContent.appendChild(topChartContent);
         }
 
+        if(titleChart == null){
+            titleChart = document.createElement('div');
+            titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title';
+            appContent.appendChild(titleChart);
+        }
+
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
+                titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
                     alert(type)
                 });
