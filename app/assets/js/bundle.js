@@ -475,6 +475,11 @@ class app {
 
         if(topChartContent == null){
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
+
+            let titleChart = document.createElement('div');
+            titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title';
+            appContent.appendChild(titleChart);
+
             topChartContent = document.createElement('div');
             topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
             appContent.appendChild(topChartContent);
@@ -483,9 +488,6 @@ class app {
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let titleChart = document.createElement('div');
-                titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title';
-
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
                     titleChart.innerText = 'Companies issues';
                     let branchs = companies[option];
@@ -13834,7 +13836,7 @@ module.exports = {
    hslaString: hslaString,
    hwbString: hwbString,
    keyword: keyword
-};
+}
 
 function getRgba(string) {
    if (!string) {
@@ -14597,7 +14599,7 @@ module.exports = {
   lch2lab: lch2lab,
   lch2xyz: lch2xyz,
   lch2rgb: lch2rgb
-};
+}
 
 
 function rgb2hsl(rgb) {
@@ -15255,7 +15257,7 @@ var conversions = __webpack_require__(/*! ./conversions */ "./node_modules/chart
 
 var convert = function() {
    return new Converter();
-};
+}
 
 for (var func in conversions) {
   // export Raw versions
@@ -25579,8 +25581,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -25660,8 +25662,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -25727,8 +25729,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -25794,8 +25796,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -25924,8 +25926,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -25991,8 +25993,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26103,8 +26105,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26170,8 +26172,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26313,8 +26315,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26426,8 +26428,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26566,8 +26568,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26664,8 +26666,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26730,8 +26732,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26857,8 +26859,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -26984,8 +26986,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27100,8 +27102,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27259,8 +27261,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27355,8 +27357,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27542,8 +27544,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27613,8 +27615,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27701,8 +27703,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27769,8 +27771,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27853,8 +27855,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -27937,8 +27939,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28021,8 +28023,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28128,8 +28130,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28236,8 +28238,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28311,8 +28313,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28382,8 +28384,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28457,8 +28459,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 
@@ -28532,8 +28534,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 //! moment.js locale configuration
 
-(function (global, factory) {
-            true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
+;(function (global, factory) {
+    true ? factory(__webpack_require__(/*! ../moment */ "./node_modules/moment/moment.js")) :
    undefined
 }(this, (function (moment) { 'use strict';
 

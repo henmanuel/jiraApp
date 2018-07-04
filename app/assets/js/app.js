@@ -131,6 +131,11 @@ class app {
 
         if(topChartContent == null){
             let appContent = document.getElementById(appUI.contentID);
+
+            let titleChart = document.createElement('div');
+            titleChart.id = appUI.topCompaniesContentChart + '-title';
+            appContent.appendChild(titleChart);
+
             topChartContent = document.createElement('div');
             topChartContent.id = appUI.topCompaniesContentChart;
             appContent.appendChild(topChartContent);
@@ -139,9 +144,6 @@ class app {
         appUI.elementLoad = appUI.topCompaniesContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
-                let titleChart = document.createElement('div');
-                titleChart.id = appUI.topCompaniesContentChart + '-title';
-
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
                     titleChart.innerText = 'Companies issues';
                     let branchs = companies[option];
