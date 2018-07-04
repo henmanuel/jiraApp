@@ -15,21 +15,13 @@
     height: 600px;
 }
 
-#app-queues-content{
-    width: 100%;
+#app-content select{
     float: left;
-    display: flex;
-    height: 300px;
-    margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-    background-color: #cfe2dc;
-    -webkit-align-items: center;
-    -webkit-justify-content: center;
 }
 
 #app-top-issues-chart, #app-top-companies-chart{
     width: 40%;
+    float: left;
     overflow: hidden;
 }
 
