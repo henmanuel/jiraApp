@@ -109,6 +109,7 @@ class app {
 
     topIssuesChart(){
         let appContent = document.getElementById(appUI.contentID);
+        let chartContainer = document.getElementById(appUI.chartContainer);
         let topChartContent = document.getElementById(appUI.topIssuesContentChart);
         let titleChart = document.getElementById(appUI.topIssuesContentChart + '-title');
 
@@ -118,10 +119,16 @@ class app {
             appContent.appendChild(titleChart);
         }
 
+        if(chartContainer == null){
+            chartContainer = document.createElement('div');
+            chartContainer.id = appUI.chartContainer;
+            appContent.appendChild(chartContainer);
+        }
+
         if(topChartContent == null){
             topChartContent = document.createElement('div');
             topChartContent.id = appUI.topIssuesContentChart;
-            appContent.appendChild(topChartContent);
+            chartContainer.appendChild(topChartContent);
         }
 
         appUI.elementLoad = appUI.topIssuesContentChart;
@@ -139,6 +146,7 @@ class app {
 
     topCompaniesIssues(){
         let appContent = document.getElementById(appUI.contentID);
+        let chartContainer = document.getElementById(appUI.chartContainer);
         let topChartContent = document.getElementById(appUI.topCompaniesContentChart);
         let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
 
@@ -148,10 +156,16 @@ class app {
             appContent.appendChild(titleChart);
         }
 
+        if(chartContainer == null){
+            chartContainer = document.createElement('div');
+            chartContainer.id = appUI.chartContainer;
+            appContent.appendChild(chartContainer);
+        }
+
         if(topChartContent == null){
             topChartContent = document.createElement('div');
             topChartContent.id = appUI.topCompaniesContentChart;
-            appContent.appendChild(topChartContent);
+            chartContainer.appendChild(topChartContent);
         }
 
         appUI.elementLoad = appUI.topCompaniesContentChart;
