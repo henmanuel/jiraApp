@@ -461,7 +461,7 @@ class app {
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
-                let topIssuesChart = new this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (type)=>{
+                let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart, (type)=>{
                     alert(type)
                 });
 

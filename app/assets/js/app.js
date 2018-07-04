@@ -117,7 +117,7 @@ class app {
         appUI.elementLoad = appUI.topContentChart;
         ConnectorService.getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
-                let topIssuesChart = new this.newChart(requestTypes, 'topChart', appUI.topContentChart, (type)=>{
+                let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topContentChart, (type)=>{
                     alert(type)
                 });
 
