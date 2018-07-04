@@ -380,6 +380,7 @@ class app {
             appContent.innerHTML = null;
             appContent.appendChild(projectsList);
 
+            this.topIssuesChart();
             this.topCompaniesIssues()
         });
     }
@@ -477,20 +478,6 @@ class app {
             topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
             appContent.appendChild(topChartContent);
         }
-
-        let chartType = document.createElement('select');
-
-        let companiesOption = document.createElement('option');
-        companiesOption.value = 'companies';
-        companiesOption.text = 'Companies';
-        chartType.add(companiesOption);
-
-        let issuesOption = document.createElement('option');
-        issuesOption.value = 'issues';
-        issuesOption.text = 'Issues Types';
-        chartType.add(issuesOption);
-
-        topChartContent.appendChild(chartType);
 
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
