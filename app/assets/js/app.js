@@ -29,14 +29,14 @@ class app {
 
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
-                this.topCompaniesIssuesTop();
+                this.topCompaniesIssues();
                 this.projectInfo()
             });
 
             appContent.innerHTML = null;
             appContent.appendChild(projectsList);
 
-            this.topCompaniesIssuesTop()
+            this.topCompaniesIssues()
         });
     }
 
@@ -116,7 +116,7 @@ class app {
         });
     }
 
-    topCompaniesIssuesTop(){
+    topCompaniesIssues(){
         let topChartContent = document.getElementById(appUI.topContentChart);
 
         if(topChartContent == null){
@@ -164,7 +164,28 @@ class app {
                         }
 
                         if(req){
-                            alert(req)
+                            let data = [];
+                            let labels = [];
+                            let backgroundColors = [];
+                            for(let key in companies[req]){
+                                if(companies[req].hasOwnProperty(key)){
+                                    let issues = Object.values(companies[req]);
+
+                                    labels.push(key);
+                                    data.push(issues.length);
+                                    backgroundColors.push(topCompaniesIssuesChart.randomColor());
+                                }
+                            }
+
+                            data = {
+                                datasets: [{
+                                    data: data,
+                                    backgroundColor: backgroundColors
+                                }],
+                                labels: labels
+                            };
+
+                            topCompaniesIssuesChart.pie(data, options);
                         }
                     }
                 };
