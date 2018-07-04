@@ -37,9 +37,9 @@ class WebHookIssuesTop
 
     if($currentDocument){
       $currentDocument[$company][$brand][$type][$issue['id']] = $request;
-      $document = $currentDocument;
+      $document = $data;
     }else{
-      $document = [$company => [$brand => [$type => [$issue['id'] = $request]]]];
+      $document = $data;
     }
 
     return Cache::loadDocument(self::Document, $document, false);
