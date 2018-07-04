@@ -26,7 +26,7 @@ class WebHookIssuesTop
 
     $issue = $data['issue'];
     $company = $issue['fields']['customfield_10070']['value'];
-    $brand = $issue['fields']['customfield_10070']['value']['child']['value'];
+    $brand = $issue['fields']['customfield_10070']['child']['value'];
     $type = $issue['fields']['customfield_10013']['requestType']['name'];
 
     $request['key'] = $issue['key'];
