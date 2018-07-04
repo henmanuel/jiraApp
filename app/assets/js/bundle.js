@@ -451,10 +451,6 @@ class app {
         return contentChart
     }
 
-    backChart(){
-        this.currentChart.pie()
-    }
-
     topIssuesChart(){
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
         let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerIssues);
@@ -520,6 +516,7 @@ class app {
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
+                let currentChart;
                 titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
@@ -527,7 +524,10 @@ class app {
                     let backOp = document.createElement('span');
                     backOp.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                     backOp.innerText = 'Back';
-                    backOp.addEventListener('click', this.backChart);
+                    backOp.addEventListener('click', ()=>{
+                        currentChart.pie()
+                    });
+
                     titleChart.appendChild(backOp);
                     let branchs = companies[option];
 
@@ -540,11 +540,11 @@ class app {
                         });
 
                         topIssuesChart.pie();
-                        this.currentChart = topBranchIssuesChart;
+                        currentChart = topBranchIssuesChart;
                     });
 
                     topBranchIssuesChart.pie();
-                    this.currentChart = topCompaniesIssuesChart;
+                    currentChart = topCompaniesIssuesChart;
                 });
 
                 topCompaniesIssuesChart.pie();

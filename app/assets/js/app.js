@@ -107,10 +107,6 @@ class app {
         return contentChart
     }
 
-    backChart(){
-        this.currentChart.pie()
-    }
-
     topIssuesChart(){
         let appContent = document.getElementById(appUI.contentID);
         let chartContainer = document.getElementById(appUI.chartContainerIssues);
@@ -176,6 +172,7 @@ class app {
         appUI.elementLoad = appUI.topCompaniesContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
+                let currentChart;
                 titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
@@ -183,7 +180,10 @@ class app {
                     let backOp = document.createElement('span');
                     backOp.id = appUI.chartBackOption;
                     backOp.innerText = 'Back';
-                    backOp.addEventListener('click', this.backChart);
+                    backOp.addEventListener('click', ()=>{
+                        currentChart.pie()
+                    });
+
                     titleChart.appendChild(backOp);
                     let branchs = companies[option];
 
@@ -196,11 +196,11 @@ class app {
                         });
 
                         topIssuesChart.pie();
-                        this.currentChart = topBranchIssuesChart;
+                        currentChart = topBranchIssuesChart;
                     });
 
                     topBranchIssuesChart.pie();
-                    this.currentChart = topCompaniesIssuesChart;
+                    currentChart = topCompaniesIssuesChart;
                 });
 
                 topCompaniesIssuesChart.pie();
