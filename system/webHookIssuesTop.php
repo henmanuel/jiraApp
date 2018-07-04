@@ -41,14 +41,26 @@ class WebHookIssuesTop
       $companiesDocument[$company][$brand][$type][$issue['id']] = $request;
       $companies = $companiesDocument;
     }else{
-      $companies = [$company => [$brand => [$type => [$issue['id'] = $request]]]];
+      $companies = [
+        $company => [
+          $brand => [
+            $type => [
+              $issue['id'] = $request
+            ]
+          ]
+        ]
+      ];
     }
 
     if($issuesDocument){
       $issuesDocument[$type][$issue['id']] = $request;
       $issues = $issuesDocument;
     }else{
-      $issues = [$type => $issue['id'] = $request];
+      $issues = [
+        $type => [
+          $issue['id'] = $request
+        ]
+      ];
     }
 
     $issues = Cache::loadDocument(self::Issues, $issues, false);
