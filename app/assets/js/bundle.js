@@ -490,8 +490,9 @@ class app {
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
+                titleChart.innerText = 'Companies issues';
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
-                    titleChart.innerText = 'Companies issues';
+                    titleChart.innerText = option;
                     let branchs = companies[option];
 
                     let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (key)=>{
@@ -513,7 +514,6 @@ class app {
         });
     }
 }new app();
-
 
 /***/ }),
 

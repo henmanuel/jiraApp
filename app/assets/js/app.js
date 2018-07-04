@@ -146,8 +146,9 @@ class app {
         appUI.elementLoad = appUI.topCompaniesContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
+                titleChart.innerText = 'Companies issues';
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
-                    titleChart.innerText = 'Companies issues';
+                    titleChart.innerText = option;
                     let branchs = companies[option];
 
                     let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
