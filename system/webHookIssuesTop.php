@@ -48,7 +48,7 @@ class WebHookIssuesTop
       $issuesDocument[$type][$issue['id']] = $request;
       $issues = $issuesDocument;
     }else{
-      $issues = [$type => [$issue['id'] = $request]];
+      $issues = [$type => $issue['id'] = $request];
     }
 
     $issues = Cache::loadDocument(self::Issues, $issues, false);
