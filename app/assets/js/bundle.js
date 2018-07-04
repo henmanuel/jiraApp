@@ -459,7 +459,7 @@ class app {
 
         if(chartContainer == null){
             chartContainer = document.createElement('div');
-            chartContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainer;
+            chartContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerIssues;
             appContent.appendChild(chartContainer);
         }
 
@@ -496,7 +496,7 @@ class app {
 
         if(chartContainer == null){
             chartContainer = document.createElement('div');
-            chartContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainer;
+            chartContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies;
             appContent.appendChild(chartContainer);
         }
 

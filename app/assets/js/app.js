@@ -115,7 +115,7 @@ class app {
 
         if(chartContainer == null){
             chartContainer = document.createElement('div');
-            chartContainer.id = appUI.chartContainer;
+            chartContainer.id = appUI.chartContainerIssues;
             appContent.appendChild(chartContainer);
         }
 
@@ -152,7 +152,7 @@ class app {
 
         if(chartContainer == null){
             chartContainer = document.createElement('div');
-            chartContainer.id = appUI.chartContainer;
+            chartContainer.id = appUI.chartContainerCompanies;
             appContent.appendChild(chartContainer);
         }
 
