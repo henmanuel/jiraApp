@@ -540,15 +540,14 @@ class app {
                         });
 
                         topIssuesChart.pie();
-                        this.currentChart = topIssuesChart;
+                        this.currentChart = topBranchIssuesChart;
                     });
 
                     topBranchIssuesChart.pie();
-                    this.currentChart = topBranchIssuesChart;
+                    this.currentChart = topCompaniesIssuesChart;
                 });
 
                 topCompaniesIssuesChart.pie();
-                this.currentChart = topCompaniesIssuesChart;
             }
         });
     }
