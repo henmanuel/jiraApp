@@ -27,6 +27,17 @@ class connectorService {
         return this.httpServiceAsync(request, this.getMethod);
     }
 
+    getCompaniesIssuesTop(project){
+        project = project.toLowerCase();
+        project = project.charAt(0).toUpperCase() + project.slice(1);
+
+        let request = {
+            'document' : 'companyIssuesTop' + project
+        };
+
+        return this.httpServiceAsync(request, this.getMethod);
+    }
+
     getQueuesController(){
         let request = {
             'document' : 'queues'

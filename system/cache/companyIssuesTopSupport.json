@@ -1,0 +1,58 @@
+{
+  "expired": false,
+  "document": {
+    "Sport": {
+      "Betcris": {
+        "Crypto": {
+          "10113": {
+            "key": "SUPPORT-105",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10113",
+            "group": [
+              "17"
+            ]
+          },
+          "10115": {
+            "key": "SUPPORT-107",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10115",
+            "group": [
+              "17"
+            ]
+          }
+        },
+        "Status": {
+          "10116": {
+            "key": "SUPPORT-108",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10116",
+            "group": [
+              "17"
+            ]
+          }
+        }
+      },
+      "Solaire": {
+        "Crypto": {
+          "10114": {
+            "key": "SUPPORT-106",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10114",
+            "group": [
+              "17"
+            ]
+          }
+        }
+      }
+    },
+    "Poker": {
+      "TruePoker": {
+        "Status": {
+          "10117": {
+            "key": "SUPPORT-109",
+            "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10117",
+            "group": [
+              "17"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

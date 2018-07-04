@@ -29,14 +29,14 @@ class app {
 
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
-                this.topIssuesChart();
+                this.topCompaniesIssuesTop();
                 this.projectInfo()
             });
 
             appContent.innerHTML = null;
             appContent.appendChild(projectsList);
 
-            this.topIssuesChart()
+            this.topCompaniesIssuesTop()
         });
     }
 
@@ -112,6 +112,64 @@ class app {
                 };
 
                 topIssuesChart.pie(data, options);
+            }
+        });
+    }
+
+    topCompaniesIssuesTop(){
+        let topChartContent = document.getElementById(appUI.topContentChart);
+
+        if(topChartContent == null){
+            let appContent = document.getElementById(appUI.contentID);
+            topChartContent = document.createElement('div');
+            topChartContent.id = appUI.topContentChart;
+            appContent.appendChild(topChartContent);
+        }
+
+        appUI.elementLoad = appUI.topContentChart;
+        ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
+            if(companies){
+                let topCompaniesIssuesChart = new ChartManager('topChart', appUI.topContentChart);
+
+                let data = [];
+                let labels = [];
+                let backgroundColors = [];
+                for(let key in companies){
+                    if(companies.hasOwnProperty(key)){
+                        let issues = Object.values(companies[key]);
+
+                        labels.push(key);
+                        data.push(issues.length);
+                        backgroundColors.push(topCompaniesIssuesChart.randomColor());
+                    }
+                }
+
+                data = {
+                    datasets: [{
+                        data: data,
+                        backgroundColor: backgroundColors
+                    }],
+                    labels: labels
+                };
+
+                let options = {
+                    onClick: (e)=>{
+                        let req;
+                        let activeElement = topCompaniesIssuesChart.chartNode.getElementAtEvent(e);
+
+                        try{
+                            req = activeElement["0"]._model.label;
+                        }catch(err){
+                            req = false;
+                        }
+
+                        if(req){
+                            alert(req)
+                        }
+                    }
+                };
+
+                topCompaniesIssuesChart.pie(data, options);
             }
         });
     }
