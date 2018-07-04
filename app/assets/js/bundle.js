@@ -353,6 +353,7 @@ class app {
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
 
             this.projects = projects;
+            let selectContainer = document.createElement('div');
             let projectsList = document.createElement('select');
 
             for(let key in projects){
@@ -371,6 +372,7 @@ class app {
 
             this.projectInfo();
 
+            selectContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].selectContainer;
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart();
@@ -379,7 +381,8 @@ class app {
             });
 
             appContent.innerHTML = null;
-            appContent.appendChild(projectsList);
+            selectContainer.appendChild(projectsList);
+            appContent.appendChild(selectContainer);
 
             this.topIssuesChart();
             this.topCompaniesIssues()
@@ -541,6 +544,7 @@ __webpack_require__.r(__webpack_exports__);
     contentID: 'app-content',
     projectIcon: 'app-project-icon',
     projectName: 'app-project-name',
+    selectContainer: 'app-select-projects-list',
     topIssuesContentChart: 'app-top-issues-chart',
     topCompaniesContentChart: 'app-top-companies-chart'
 });

@@ -9,6 +9,7 @@ class app {
             let appContent = document.getElementById(appUI.contentID);
 
             this.projects = projects;
+            let selectContainer = document.createElement('div');
             let projectsList = document.createElement('select');
 
             for(let key in projects){
@@ -27,6 +28,7 @@ class app {
 
             this.projectInfo();
 
+            selectContainer.id = appUI.selectContainer;
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart();
@@ -35,7 +37,8 @@ class app {
             });
 
             appContent.innerHTML = null;
-            appContent.appendChild(projectsList);
+            selectContainer.appendChild(projectsList);
+            appContent.appendChild(selectContainer);
 
             this.topIssuesChart();
             this.topCompaniesIssues()
