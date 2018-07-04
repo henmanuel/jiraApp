@@ -20,7 +20,7 @@ export class ChartManager{
 
     randomColor(){
         let randomColorFactor = function(){
-            return Math.round(Math.random() * 255);
+            return Math.floor(Math.random() * (55 - 150 + 1)) + min;
         };
 
         return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ', 0.5)';
