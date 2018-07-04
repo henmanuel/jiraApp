@@ -28,7 +28,7 @@
     -webkit-justify-content: center;
 }
 
-#app-content-top-chart{
+#app-top-issues-chart, #app-top-companies-chart{
     width: 40%;
     overflow: hidden;
 }

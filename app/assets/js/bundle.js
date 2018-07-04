@@ -522,8 +522,8 @@ __webpack_require__.r(__webpack_exports__);
     contentID: 'app-content',
     projectIcon: 'app-project-icon',
     projectName: 'app-project-name',
-    topIssuesContentChart: 'app--top-issues-chart',
-    topCompaniesContentChart: 'app--top-companies-chart'
+    topIssuesContentChart: 'app-top-issues-chart',
+    topCompaniesContentChart: 'app-top-companies-chart'
 });
 
 /***/ }),
