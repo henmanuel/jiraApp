@@ -453,16 +453,16 @@ class app {
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
         let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title');
 
-        if(topChartContent == null){
-            topChartContent = document.createElement('div');
-            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
-            appContent.appendChild(topChartContent);
-        }
-
         if(titleChart == null){
             titleChart = document.createElement('div');
             titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart + '-title';
             appContent.appendChild(titleChart);
+        }
+
+        if(topChartContent == null){
+            topChartContent = document.createElement('div');
+            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
+            appContent.appendChild(topChartContent);
         }
 
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
@@ -483,16 +483,16 @@ class app {
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart);
         let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title');
 
-        if(topChartContent == null){
-            topChartContent = document.createElement('div');
-            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
-            appContent.appendChild(topChartContent);
-        }
-
         if(titleChart == null){
             titleChart = document.createElement('div');
             titleChart.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title';
             appContent.appendChild(titleChart);
+        }
+
+        if(topChartContent == null){
+            topChartContent = document.createElement('div');
+            topChartContent.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;
+            appContent.appendChild(topChartContent);
         }
 
         _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart;

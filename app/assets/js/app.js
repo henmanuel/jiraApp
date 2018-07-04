@@ -109,16 +109,16 @@ class app {
         let topChartContent = document.getElementById(appUI.topIssuesContentChart);
         let titleChart = document.getElementById(appUI.topIssuesContentChart + '-title');
 
-        if(topChartContent == null){
-            topChartContent = document.createElement('div');
-            topChartContent.id = appUI.topIssuesContentChart;
-            appContent.appendChild(topChartContent);
-        }
-
         if(titleChart == null){
             titleChart = document.createElement('div');
             titleChart.id = appUI.topIssuesContentChart + '-title';
             appContent.appendChild(titleChart);
+        }
+
+        if(topChartContent == null){
+            topChartContent = document.createElement('div');
+            topChartContent.id = appUI.topIssuesContentChart;
+            appContent.appendChild(topChartContent);
         }
 
         appUI.elementLoad = appUI.topIssuesContentChart;
@@ -139,16 +139,16 @@ class app {
         let topChartContent = document.getElementById(appUI.topCompaniesContentChart);
         let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
 
-        if(topChartContent == null){
-            topChartContent = document.createElement('div');
-            topChartContent.id = appUI.topCompaniesContentChart;
-            appContent.appendChild(topChartContent);
-        }
-
         if(titleChart == null){
             titleChart = document.createElement('div');
             titleChart.id = appUI.topCompaniesContentChart + '-title';
             appContent.appendChild(titleChart);
+        }
+
+        if(topChartContent == null){
+            topChartContent = document.createElement('div');
+            topChartContent.id = appUI.topCompaniesContentChart;
+            appContent.appendChild(topChartContent);
         }
 
         appUI.elementLoad = appUI.topCompaniesContentChart;
