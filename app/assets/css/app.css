@@ -24,6 +24,11 @@
     width: 100%;
 }
 
+#app-top-issues-chart-title, #app-top-companies-chart-title{
+    width: 40%;
+    float: left;
+}
+
 #app-top-issues-chart, #app-top-companies-chart{
     width: 40%;
     float: left;
