@@ -29,6 +29,7 @@ class app {
 
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
+                this.topIssuesChart();
                 this.topCompaniesIssues();
                 this.projectInfo()
             });
