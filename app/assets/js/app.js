@@ -107,6 +107,8 @@ class app {
         return contentChart
     }
 
+
+
     topIssuesChart(){
         let appContent = document.getElementById(appUI.contentID);
         let chartContainer = document.getElementById(appUI.chartContainerIssues);
@@ -171,9 +173,11 @@ class app {
         appUI.elementLoad = appUI.topCompaniesContentChart;
         ConnectorService.getCompaniesIssuesTop(this.currentProject.key).then((companies)=>{
             if(companies){
+                titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
                 let topCompaniesIssuesChart = this.newChart(companies, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
                     titleChart.innerText = option;
+                    titleChart.appendChild('<span>back</span>');
                     let branchs = companies[option];
 
                     let topBranchIssuesChart = this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
