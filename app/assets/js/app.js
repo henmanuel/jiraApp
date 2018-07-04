@@ -36,6 +36,19 @@ class app {
             appContent.innerHTML = null;
             appContent.appendChild(projectsList);
 
+            let chartType = document.createElement('select');
+            let chartOption = document.createElement('option');
+
+            chartOption.value = 'companies';
+            chartOption.text = 'Companies';
+            chartType.add(chartOption);
+
+            chartOption.value = 'issues';
+            chartOption.text = 'Issues Types';
+            chartType.add(chartOption);
+
+            appContent.appendChild(chartType);
+
             this.topCompaniesIssues()
         });
     }
@@ -115,47 +128,11 @@ class app {
         appUI.elementLoad = appUI.topContentChart;
         ConnectorService.getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
-                let topIssuesChart = new ChartManager('topChart', appUI.topContentChart);
+                let topIssuesChart = new this.newChart(requestTypes, 'topChart', appUI.topContentChart, (type)=>{
+                    alert(type)
+                });
 
-                let data = [];
-                let labels = [];
-                let backgroundColors = [];
-                for(let key in requestTypes){
-                    if(requestTypes.hasOwnProperty(key)){
-                        let issues = Object.values(requestTypes[key]);
-
-                        labels.push(key);
-                        data.push(issues.length);
-                        backgroundColors.push(topIssuesChart.randomColor());
-                    }
-                }
-
-                data = {
-                    datasets: [{
-                        data: data,
-                        backgroundColor: backgroundColors
-                    }],
-                    labels: labels
-                };
-
-                let options = {
-                    onClick: (e)=>{
-                        let req;
-                        let activeElement = topIssuesChart.chartNode.getElementAtEvent(e);
-
-                        try{
-                            req = activeElement["0"]._model.label;
-                        }catch(err){
-                            req = false;
-                        }
-
-                        if(req){
-                            alert(req)
-                        }
-                    }
-                };
-
-                topIssuesChart.pie(data, options);
+                topIssuesChart.pie();
             }
         });
     }
