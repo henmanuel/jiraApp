@@ -103,16 +103,18 @@ __webpack_require__.r(__webpack_exports__);
 class ChartManager{
     constructor(name, container){
         this.data = {};
+        this.name = name;
         this.options = {};
-        let chartContent = document.getElementById(container);
-
-        chartContent.innerHTML = null;
-        chartContent.innerHTML = `<canvas id="${name}" width="100%" height="100%"></canvas>`;
-
-        this.chart = document.getElementById(name);
+        this.container = container;
     }
 
     newChart(type, data, options){
+        let chartContent = document.getElementById(this.container);
+        chartContent.innerHTML = null;
+        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
+
+        this.chart = document.getElementById(name);
+
         this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
             type: type,
             data: data,
