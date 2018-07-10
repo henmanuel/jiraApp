@@ -513,15 +513,6 @@ class app {
         }
 
         return this.newChart(dataCompany, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
-            titleChart.innerText = option;
-            let backOp = document.createElement('span');
-            backOp.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
-            backOp.innerText = 'Back';
-            backOp.addEventListener('click', ()=>{
-                currentChart.pie()
-            });
-
-            titleChart.appendChild(backOp);
             let topCompanyChart = this.topCompanyIssues(dataBranch);
             topCompanyChart.pie();
         });
@@ -529,9 +520,6 @@ class app {
 
     topCompanyIssues(){
         return this.newChart(branchs, 'topBranchChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (key)=>{
-            let issues = branchs[key];
-            titleChart.innerText = key;
-
             this.topBranchIssues();
         });
     }

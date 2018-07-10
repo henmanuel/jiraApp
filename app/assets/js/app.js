@@ -169,15 +169,6 @@ class app {
         }
 
         return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
-            titleChart.innerText = option;
-            let backOp = document.createElement('span');
-            backOp.id = appUI.chartBackOption;
-            backOp.innerText = 'Back';
-            backOp.addEventListener('click', ()=>{
-                currentChart.pie()
-            });
-
-            titleChart.appendChild(backOp);
             let topCompanyChart = this.topCompanyIssues(dataBranch);
             topCompanyChart.pie();
         });
@@ -185,9 +176,6 @@ class app {
 
     topCompanyIssues(){
         return this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
-            let issues = branchs[key];
-            titleChart.innerText = key;
-
             this.topBranchIssues();
         });
     }
