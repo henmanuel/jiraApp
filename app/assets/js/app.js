@@ -146,10 +146,6 @@ class app {
         });
     }
 
-    backChart(){
-        this.currentChart.pie()
-    }
-
     topCompaniesChart(){
         let appContent = document.getElementById(appUI.contentID);
         let chartContainer = document.getElementById(appUI.chartContainerCompanies);
@@ -183,7 +179,10 @@ class app {
 
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
-                back.addEventListener('click', this.backChart);
+                back.addEventListener('click', ()=>{
+                    this.currentChart.pie()
+                });
+
                 titleChart.appendChild(back);
 
                 this.currentChart = this.topCompanyChart(companies);

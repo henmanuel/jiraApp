@@ -490,10 +490,6 @@ class app {
         });
     }
 
-    backChart(){
-        this.currentChart.pie()
-    }
-
     topCompaniesChart(){
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
         let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies);
@@ -527,7 +523,10 @@ class app {
 
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
-                back.addEventListener('click', this.backChart);
+                back.addEventListener('click', ()=>{
+                    this.currentChart.pie()
+                });
+
                 titleChart.appendChild(back);
 
                 this.currentChart = this.topCompanyChart(companies);
