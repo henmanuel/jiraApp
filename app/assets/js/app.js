@@ -240,7 +240,8 @@ class app {
                 }
             }
 
-            this.topTypeIssuesChart(dataTypes);
+            let topIssuesChart = this.topTypeIssuesChart(dataTypes);
+            topIssuesChart.pie()
         });
     }
 
