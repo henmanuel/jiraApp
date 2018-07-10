@@ -488,7 +488,23 @@ class app {
         });
     }
 
-    topRequestTypes(data){
+    topRequestTypes(companies){
+        let data = [];
+        for(let company in companies){
+            if(companies.hasOwnProperty(company)){
+                for(let branch in companies[company]){
+                    if(companies[company].hasOwnProperty(branch)){
+                        for(let issue in companies[branch]){
+                            let issues = 0;
+                            if(companies[branch].hasOwnProperty(issue)){
+                                data[company] = ++issues
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         return this.newChart(data, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
             titleChart.innerText = option;
             let backOp = document.createElement('span');
@@ -499,7 +515,6 @@ class app {
             });
 
             titleChart.appendChild(backOp);
-
             this.topCompanyIssues();
         });
     }
