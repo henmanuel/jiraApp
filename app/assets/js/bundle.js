@@ -351,9 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class app {
     constructor(){
-        this.backChart = [];
         this.currentChart = null;
-
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].list().then((projects)=>{
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
 
@@ -494,6 +492,7 @@ class app {
     }
 
     topIssuesCompanies(){
+        this.backChart = [];
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
         let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies);
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart);
