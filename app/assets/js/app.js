@@ -183,7 +183,7 @@ class app {
 
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
-                back.addEventListener(this.backChart);
+                back.addEventListener('click', this.backChart);
                 titleChart.appendChild(back);
 
                 let topRequestChart = this.topCompanyChart(companies);

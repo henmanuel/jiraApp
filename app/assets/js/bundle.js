@@ -527,7 +527,7 @@ class app {
 
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
-                back.addEventListener(this.backChart);
+                back.addEventListener('click', this.backChart);
                 titleChart.appendChild(back);
 
                 let topRequestChart = this.topCompanyChart(companies);
