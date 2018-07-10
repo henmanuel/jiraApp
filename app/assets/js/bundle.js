@@ -109,7 +109,13 @@ class ChartManager{
     }
 
     newChart(type, data, options){
-        this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(this.chart,{
+        let chartContent = document.getElementById(this.container);
+
+        chartContent.innerHTML = null;
+        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
+
+        let chart = document.getElementById(this.name);
+        new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(chart,{
             type: type,
             data: data,
             options: options
@@ -125,12 +131,6 @@ class ChartManager{
     }
 
     pie(){
-        let chartContent = document.getElementById(this.container);
-
-        chartContent.innerHTML = null;
-        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
-
-        this.chart = document.getElementById(this.name);
         this.newChart('pie', this.data, this.options)
     }
 }

@@ -9,7 +9,13 @@ export class ChartManager{
     }
 
     newChart(type, data, options){
-        this.chartNode = new Chart(this.chart,{
+        let chartContent = document.getElementById(this.container);
+
+        chartContent.innerHTML = null;
+        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
+
+        let chart = document.getElementById(this.name);
+        new Chart(chart,{
             type: type,
             data: data,
             options: options
@@ -25,12 +31,6 @@ export class ChartManager{
     }
 
     pie(){
-        let chartContent = document.getElementById(this.container);
-
-        chartContent.innerHTML = null;
-        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
-
-        this.chart = document.getElementById(this.name);
         this.newChart('pie', this.data, this.options)
     }
 }
