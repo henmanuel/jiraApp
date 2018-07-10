@@ -173,8 +173,9 @@ class app {
             if(companies){
                 titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
-
                 let back = document.createElement('span');
+
+                back.innerText = 'Back';
                 back.id = appUI.chartBackOption;
                 titleChart.appendChild(back);
 

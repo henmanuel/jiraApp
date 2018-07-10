@@ -517,8 +517,9 @@ class app {
             if(companies){
                 titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
-
                 let back = document.createElement('span');
+
+                back.innerText = 'Back';
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                 titleChart.appendChild(back);
 
