@@ -275,7 +275,6 @@ class app {
 
     topTypeIssuesChart(dataIssueType){
         return this.newChart(dataIssueType, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
-            this.backChart = this.currentChart;
             alert(issue);
         });
     }

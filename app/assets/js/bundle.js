@@ -619,7 +619,6 @@ class app {
 
     topTypeIssuesChart(dataIssueType){
         return this.newChart(dataIssueType, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
-            this.backChart = this.currentChart;
             alert(issue);
         });
     }
