@@ -445,8 +445,6 @@ class app {
                     req = false;
                 }
 
-                this.backChart = this.currentChart;
-
                 if(req){
                     action(req)
                 }
