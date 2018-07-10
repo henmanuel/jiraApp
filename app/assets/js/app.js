@@ -241,6 +241,7 @@ class app {
                 }
             }
 
+            this.backChart =  this.currentChart;
             this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
             this.currentChart.pie();
         });
@@ -268,6 +269,7 @@ class app {
                 }
             }
 
+            this.backChart =  this.currentChart;
             this.currentChart = this.topTypeIssuesChart(dataTypes);
             this.currentChart.pie()
         });
@@ -275,6 +277,7 @@ class app {
 
     topTypeIssuesChart(dataIssueType){
         return this.newChart(dataIssueType, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
+            this.backChart =  this.currentChart;
             alert(issue);
         });
     }
