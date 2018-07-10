@@ -220,7 +220,7 @@ class app {
                 }
             }
 
-            let topCompanyChart = this.topBranchesChart(dataBranch);
+            let topCompanyChart = this.topBranchesChart(companies[option]);
             topCompanyChart.pie();
         });
     }
@@ -243,8 +243,8 @@ class app {
         });
     }
 
-    topTypeIssuesChart(issues){
-        return this.newChart(issues, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
+    topTypeIssuesChart(dataIssueType){
+        return this.newChart(dataIssueType, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
             alert(issue);
         });
     }

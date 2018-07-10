@@ -564,7 +564,7 @@ class app {
                 }
             }
 
-            let topCompanyChart = this.topBranchesChart(dataBranch);
+            let topCompanyChart = this.topBranchesChart(companies[option]);
             topCompanyChart.pie();
         });
     }
@@ -587,8 +587,8 @@ class app {
         });
     }
 
-    topTypeIssuesChart(issues){
-        return this.newChart(issues, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
+    topTypeIssuesChart(dataIssueType){
+        return this.newChart(dataIssueType, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
             alert(issue);
         });
     }
