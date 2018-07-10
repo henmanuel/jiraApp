@@ -5,8 +5,8 @@ import {ConnectorService} from './ConnectorService'
 
 class app {
     constructor(){
+        this.backChart = [];
         this.currentChart = null;
-        this.backChart = null;
 
         Project.list().then((projects)=>{
             let appContent = document.getElementById(appUI.contentID);
