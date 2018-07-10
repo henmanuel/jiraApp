@@ -220,20 +220,20 @@ class app {
                 }
             }
 
-            let topCompanyChart = this.topBranchesChart(companies[option]);
+            let topCompanyChart = this.topBranchesChart(dataBranch, companies[option]);
             topCompanyChart.pie();
         });
     }
 
-    topBranchesChart(branches){
+    topBranchesChart(branches, branchIssues){
         return this.newChart(branches, 'topBranchChart', appUI.topCompaniesContentChart, (option)=>{
             let dataTypes = [];
-            for(let type in branches[option]){
-                if(branches[option].hasOwnProperty(type)){
+            for(let type in branchIssues[option]){
+                if(branchIssues[option].hasOwnProperty(type)){
                     let dataIssueType = [];
-                    for(let issue in branches[option][type]){
-                        if(branches[option][type].hasOwnProperty(issue)){
-                            dataIssueType[issue] = branches[option][type][issue];
+                    for(let issue in branchIssues[option][type]){
+                        if(branchIssues[option][type].hasOwnProperty(issue)){
+                            dataIssueType[issue] = branchIssues[option][type][issue];
                             dataTypes[type] = dataIssueType;
                         }
                     }
