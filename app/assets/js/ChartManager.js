@@ -3,20 +3,16 @@ import Chart from 'chart.js'
 export class ChartManager{
     constructor(name, container){
         this.data = {};
-        this.name = name;
-        this.chart = null;
         this.options = {};
-        this.container = container;
+        let chartContent = document.getElementById(container);
+
+        chartContent.innerHTML = null;
+        chartContent.innerHTML = `<canvas id="${name}" width="100%" height="100%"></canvas>`;
+
+        this.chart = document.getElementById(name);
     }
 
     newChart(type, data, options){
-        let chartContent = document.getElementById(this.container);
-
-        chartContent.innerHTML = null;
-        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
-
-        this.chart = document.getElementById(name);
-
         this.chartNode = new Chart(this.chart,{
             type: type,
             data: data,
