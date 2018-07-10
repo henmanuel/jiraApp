@@ -104,12 +104,14 @@ class ChartManager{
     constructor(name, container){
         this.data = {};
         this.name = name;
+        this.chart = null;
         this.options = {};
         this.container = container;
     }
 
     newChart(type, data, options){
         let chartContent = document.getElementById(this.container);
+
         chartContent.innerHTML = null;
         chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
 
