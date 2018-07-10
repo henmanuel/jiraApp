@@ -518,7 +518,7 @@ class app {
                 titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
 
-                let topRequestChart = this.topRequestTypes(companies);
+                let topRequestChart = this.topCompanyChart(companies);
                 topRequestChart.pie();
             }
         });
