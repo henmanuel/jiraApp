@@ -583,7 +583,7 @@ class app {
                 }
             }
 
-            this.backChart =  this.currentChart;
+            this.backChart = this.currentChart;
             this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
             this.currentChart.pie();
         });
@@ -611,7 +611,7 @@ class app {
                 }
             }
 
-            this.backChart =  this.currentChart;
+            this.backChart = this.currentChart;
             this.currentChart = this.topTypeIssuesChart(dataTypes);
             this.currentChart.pie()
         });
@@ -619,7 +619,7 @@ class app {
 
     topTypeIssuesChart(dataIssueType){
         return this.newChart(dataIssueType, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
-            this.backChart =  this.currentChart;
+            this.backChart = this.currentChart;
             alert(issue);
         });
     }
