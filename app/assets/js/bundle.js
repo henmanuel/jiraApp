@@ -531,7 +531,6 @@ class app {
                         this.topIssuesCompanies();
                     }else{
                         --index;
-                        --this.backChart.length;
                         this.backChart[index].pie();
                     }
                 });
