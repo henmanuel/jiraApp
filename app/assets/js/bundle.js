@@ -484,11 +484,11 @@ class app {
         _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
-                this.currentChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
+                let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
                     alert(type)
                 });
 
-                this.currentChart.pie();
+                topIssuesChart.pie();
             }
         });
     }
