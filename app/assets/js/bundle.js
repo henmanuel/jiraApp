@@ -103,13 +103,9 @@ __webpack_require__.r(__webpack_exports__);
 class ChartManager{
     constructor(name, container){
         this.data = {};
+        this.name = name;
         this.options = {};
-        let chartContent = document.getElementById(container);
-
-        chartContent.innerHTML = null;
-        chartContent.innerHTML = `<canvas id="${name}" width="100%" height="100%"></canvas>`;
-
-        this.chart = document.getElementById(name);
+        this.container = container;
     }
 
     newChart(type, data, options){
@@ -129,6 +125,12 @@ class ChartManager{
     }
 
     pie(){
+        let chartContent = document.getElementById(this.container);
+
+        chartContent.innerHTML = null;
+        chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
+
+        this.chart = document.getElementById(this.name);
         this.newChart('pie', this.data, this.options)
     }
 }
