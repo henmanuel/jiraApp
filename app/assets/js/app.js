@@ -191,7 +191,7 @@ class app {
                 });
 
                 titleChart.appendChild(back);
-                this.currentChart = this.topCompanyChart(companies);
+                this.currentChart = this.topCompaniesChart(companies);
                 this.currentChart.pie();
             }
         });
