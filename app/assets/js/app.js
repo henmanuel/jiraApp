@@ -146,22 +146,17 @@ class app {
 
     topRequestTypes(companies){
         let dataCompany = [];
-        let dataBranch = [];
         for(let company in companies){
             if(companies.hasOwnProperty(company)){
                 let companyIssues = [];
                 for(let branch in companies[company]){
                     if(companies[company].hasOwnProperty(branch)){
                         for(let type in companies[company][branch]){
-                            let branchIssues = [branch => []];
                             if(companies[company][branch].hasOwnProperty(type)){
                                 for(let issue in companies[company][branch][type]){
                                     if(companies[company][branch][type].hasOwnProperty(issue)){
-                                        branchIssues[branch][issue] = companies[company][branch][type][issue];
                                         companyIssues[issue] = companies[company][branch][type][issue];
-
                                         dataCompany[company] = companyIssues;
-                                        dataBranch[company] = branchIssues;
                                     }
                                 }
                             }
@@ -172,8 +167,7 @@ class app {
         }
 
         return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
-            let topCompanyChart = this.topCompanyIssues(dataBranch);
-            topCompanyChart.pie();
+
         });
     }
 
