@@ -174,13 +174,13 @@ class app {
         });
     }
 
-    topCompanyIssues(){
+    topCompanyIssues(branchs){
         return this.newChart(branchs, 'topBranchChart', appUI.topCompaniesContentChart, (key)=>{
             this.topBranchIssues();
         });
     }
 
-    topBranchIssues(){
+    topBranchIssues(issues){
         return this.newChart(issues, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
             alert(issue);
             titleChart.innerText = issue;

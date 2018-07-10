@@ -518,13 +518,13 @@ class app {
         });
     }
 
-    topCompanyIssues(){
+    topCompanyIssues(branchs){
         return this.newChart(branchs, 'topBranchChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (key)=>{
             this.topBranchIssues();
         });
     }
 
-    topBranchIssues(){
+    topBranchIssues(issues){
         return this.newChart(issues, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
             alert(issue);
             titleChart.innerText = issue;
