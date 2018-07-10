@@ -518,6 +518,10 @@ class app {
                 titleChart.innerHTML = null;
                 titleChart.innerText = 'Companies issues';
 
+                let back = document.createElement('span');
+                back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
+                titleChart.appendChild(back);
+
                 let topRequestChart = this.topCompanyChart(companies);
                 topRequestChart.pie();
             }
