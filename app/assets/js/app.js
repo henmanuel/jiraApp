@@ -186,7 +186,8 @@ class app {
                     if(!index){
                         this.topCompaniesChart()
                     }else{
-                        this.backChart[index -1].pie()
+                        --index;
+                        this.backChart[index].pie()
                     }
                 });
 
