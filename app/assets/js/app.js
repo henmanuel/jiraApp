@@ -181,8 +181,13 @@ class app {
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
-                    let index = this.backChart.length -1;
-                    this.backChart[index].pie()
+                    let index = this.backChart.length;
+
+                    if(!index){
+                        this.topIssuesChart()
+                    }else{
+                        this.backChart[index -1].pie()
+                    }
                 });
 
                 titleChart.appendChild(back);
