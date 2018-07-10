@@ -489,7 +489,8 @@ class app {
     }
 
     topRequestTypes(companies){
-        let data = [];
+        let dataCompany = [];
+        let dataBranch = [];
         for(let company in companies){
             if(companies.hasOwnProperty(company)){
                 let issues = [];
@@ -499,8 +500,9 @@ class app {
                             if(companies[company][branch].hasOwnProperty(type)){
                                 for(let issue in companies[company][branch][type]){
                                     if(companies[company][branch][type].hasOwnProperty(issue)){
-                                        issues[issue] =companies[company][branch][type][issue];
-                                        data[company] = issues;
+                                        issues[issue] = companies[company][branch][type][issue];
+                                        dataBranch[branch] = issues;
+                                        dataCompany[company] = issues;
                                     }
                                 }
                             }
@@ -520,7 +522,8 @@ class app {
             });
 
             titleChart.appendChild(backOp);
-            this.topCompanyIssues();
+            let topCompanyChart = this.topCompanyIssues(dataBranch);
+            topCompanyChart.pie();
         });
     }
 
