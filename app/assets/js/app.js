@@ -137,11 +137,11 @@ class app {
         ConnectorService.getIssuesTop(this.currentProject.key).then((requestTypes)=>{
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
-                let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
+                this.currentChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
                     alert(type)
                 });
 
-                topIssuesChart.pie();
+                this.currentChart.pie();
             }
         });
     }
