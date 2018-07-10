@@ -498,6 +498,7 @@ class app {
                             if(companies[company][branch].hasOwnProperty(type)){
                                 for(let issue in companies[company][branch][type]){
                                     if(companies[company][branch][type].hasOwnProperty(issue)){
+                                        data[company][issue] = 0;
                                         data[company][issue] = companies[company][branch][type][issue];
                                     }
                                 }
