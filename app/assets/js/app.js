@@ -184,7 +184,7 @@ class app {
                     let index = this.backChart.length;
 
                     if(!index){
-                        this.topIssuesChart()
+                        this.topCompaniesChart()
                     }else{
                         this.backChart[index -1].pie()
                     }
@@ -245,6 +245,7 @@ class app {
             }
 
             this.backChart['topCompaniesChart'] = this.currentChart;
+            this.backChart.length++;
             this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
             this.currentChart.pie();
         });
@@ -273,6 +274,7 @@ class app {
             }
 
             this.backChart['topBranchChart'] = this.currentChart;
+            this.backChart.length++;
             this.currentChart = this.topTypeIssuesChart(dataTypes);
             this.currentChart.pie()
         });
