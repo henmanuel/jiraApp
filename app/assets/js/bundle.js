@@ -520,7 +520,7 @@ class app {
                             for(let issue in companies[option][branch][type]){
                                 if(companies[option][branch][type].hasOwnProperty(issue)){
                                     companyIssues[issue] = companies[option][branch][type][issue];
-                                    dataBranch[option] = companyIssues;
+                                    dataBranch[branch] = companyIssues;
                                 }
                             }
                         }
