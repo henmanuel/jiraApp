@@ -490,6 +490,7 @@ class app {
 
     topRequestTypes(companies){
         let data = [];
+        let issues = [];
         for(let company in companies){
             if(companies.hasOwnProperty(company)){
                 for(let branch in companies[company]){
@@ -498,7 +499,8 @@ class app {
                             if(companies[company][branch].hasOwnProperty(type)){
                                 for(let issue in companies[company][branch][type]){
                                     if(companies[company][branch][type].hasOwnProperty(issue)){
-                                        data[company] = [issue => companies[company][branch][type][issue]];
+                                        issues[issue] =companies[company][branch][type][issue];
+                                        data[company] = issues;
                                     }
                                 }
                             }
