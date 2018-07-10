@@ -35,7 +35,7 @@ class app {
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart();
-                this.topCompaniesChart();
+                this.topIssuesCompanies();
                 this.projectInfo()
             });
 
@@ -44,7 +44,7 @@ class app {
             appContent.appendChild(selectContainer);
 
             this.topIssuesChart();
-            this.topCompaniesChart()
+            this.topIssuesCompanies()
         });
     }
 
@@ -147,7 +147,7 @@ class app {
         });
     }
 
-    topCompaniesChart(){
+    topIssuesCompanies(){
         let appContent = document.getElementById(appUI.contentID);
         let chartContainer = document.getElementById(appUI.chartContainerCompanies);
         let topChartContent = document.getElementById(appUI.topCompaniesContentChart);
@@ -181,7 +181,13 @@ class app {
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
-                    this.backChart[this.currentChart.name].pie()
+                    let index = this.backChart.length;
+                    if(!index){
+                        this.topIssuesCompanies();
+                    }else{
+                        --index;
+                        this.backChart[index].pie();
+                    }
                 });
 
                 titleChart.appendChild(back);
@@ -191,7 +197,7 @@ class app {
         });
     }
 
-    topCompanyChart(companies){
+    topCompaniesChart(companies){
         let dataCompany = [];
         for(let company in companies){
             if(companies.hasOwnProperty(company)){
@@ -213,7 +219,7 @@ class app {
             }
         }
 
-        return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
+        return this.newChart(dataCompany, 'topIssuesCompanies', appUI.topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
             let back = document.getElementById(appUI.chartBackOption);
             titleChart.innerHTML = null;
@@ -238,13 +244,13 @@ class app {
                 }
             }
 
-            this.backChart['topCompaniesChart'] = this.currentChart;
-            this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
+            this.backChart.push(this.currentChart);
+            this.currentChart = this.topBranchChart(dataBranch, companies[option]);
             this.currentChart.pie();
         });
     }
 
-    topBranchesChart(branches, branchIssues){
+    topBranchChart(branches, branchIssues){
         return this.newChart(branches, 'topBranchChart', appUI.topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
             let back = document.getElementById(appUI.chartBackOption);
@@ -266,8 +272,7 @@ class app {
                 }
             }
 
-            this.backChart['topBranchChart'] = this.currentChart;
-            this.backChart.length++;
+            this.backChart.push(this.currentChart);
             this.topTypeIssuesChart(dataTypes).pie();
         });
     }

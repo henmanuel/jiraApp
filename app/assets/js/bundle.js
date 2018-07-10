@@ -381,7 +381,7 @@ class app {
             projectsList.addEventListener('change', (e)=>{
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart();
-                this.topCompaniesChart();
+                this.topIssuesCompanies();
                 this.projectInfo()
             });
 
@@ -390,7 +390,7 @@ class app {
             appContent.appendChild(selectContainer);
 
             this.topIssuesChart();
-            this.topCompaniesChart()
+            this.topIssuesCompanies()
         });
     }
 
@@ -493,7 +493,7 @@ class app {
         });
     }
 
-    topCompaniesChart(){
+    topIssuesCompanies(){
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
         let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies);
         let topChartContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart);
@@ -527,7 +527,13 @@ class app {
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                 back.addEventListener('click', ()=>{
-                    this.backChart[this.currentChart.name].pie()
+                    let index = this.backChart.length;
+                    if(!index){
+                        this.topIssuesCompanies();
+                    }else{
+                        --index;
+                        this.backChart[index].pie();
+                    }
                 });
 
                 titleChart.appendChild(back);
@@ -537,7 +543,7 @@ class app {
         });
     }
 
-    topCompanyChart(companies){
+    topCompaniesChart(companies){
         let dataCompany = [];
         for(let company in companies){
             if(companies.hasOwnProperty(company)){
@@ -559,7 +565,7 @@ class app {
             }
         }
 
-        return this.newChart(dataCompany, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
+        return this.newChart(dataCompany, 'topIssuesCompanies', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title');
             let back = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption);
             titleChart.innerHTML = null;
@@ -584,13 +590,13 @@ class app {
                 }
             }
 
-            this.backChart['topCompaniesChart'] = this.currentChart;
-            this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
+            this.backChart.push(this.currentChart);
+            this.currentChart = this.topBranchChart(dataBranch, companies[option]);
             this.currentChart.pie();
         });
     }
 
-    topBranchesChart(branches, branchIssues){
+    topBranchChart(branches, branchIssues){
         return this.newChart(branches, 'topBranchChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title');
             let back = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption);
@@ -612,8 +618,7 @@ class app {
                 }
             }
 
-            this.backChart['topBranchChart'] = this.currentChart;
-            this.backChart.length++;
+            this.backChart.push(this.currentChart);
             this.topTypeIssuesChart(dataTypes).pie();
         });
     }
