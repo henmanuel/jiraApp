@@ -167,7 +167,25 @@ class app {
         }
 
         return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
+            let dataBranch = [];
+            for(let branch in companies[option]){
+                if(companies[option].hasOwnProperty(branch)){
+                    let companyIssues = [];
+                    for(let type in companies[option][branch]){
+                        if(companies[option][branch].hasOwnProperty(type)){
+                            for(let issue in companies[option][branch][type]){
+                                if(companies[option][branch][type].hasOwnProperty(issue)){
+                                    companyIssues[issue] = companies[option][branch][type][issue];
+                                    dataBranch[option] = companyIssues;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
+            let topCompanyChart = this.topCompanyIssues(dataBranch);
+            topCompanyChart.pie();
         });
     }
 
