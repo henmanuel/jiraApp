@@ -519,7 +519,7 @@ class app {
                 titleChart.innerText = 'Companies issues';
                 let back = document.createElement('span');
 
-                back.innerText = 'Back';
+                back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                 titleChart.appendChild(back);
 
@@ -555,6 +555,9 @@ class app {
             let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title');
             titleChart.innerHTML = null;
             titleChart.innerText = `Issues in ${option} company`;
+
+            let back = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption);
+            back.innerText = 'Back';
 
             let dataBranch = [];
             for(let branch in companies[option]){

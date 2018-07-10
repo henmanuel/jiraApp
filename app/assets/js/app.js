@@ -175,7 +175,7 @@ class app {
                 titleChart.innerText = 'Companies issues';
                 let back = document.createElement('span');
 
-                back.innerText = 'Back';
+                back.innerText = null;
                 back.id = appUI.chartBackOption;
                 titleChart.appendChild(back);
 
@@ -211,6 +211,9 @@ class app {
             let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
             titleChart.innerHTML = null;
             titleChart.innerText = `Issues in ${option} company`;
+
+            let back = document.getElementById(appUI.chartBackOption);
+            back.innerText = 'Back';
 
             let dataBranch = [];
             for(let branch in companies[option]){
