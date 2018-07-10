@@ -154,6 +154,7 @@ class app {
                             if(companies[company][branch].hasOwnProperty(type)){
                                 for(let issue in companies[company][branch][type]){
                                     if(companies[company][branch][type].hasOwnProperty(issue)){
+                                        data[company];
                                         data[company].push(issue);
                                     }
                                 }
