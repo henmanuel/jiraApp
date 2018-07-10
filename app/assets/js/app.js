@@ -5,6 +5,8 @@ import {ConnectorService} from './ConnectorService'
 
 class app {
     constructor(){
+        this.currentChart = null;
+
         Project.list().then((projects)=>{
             let appContent = document.getElementById(appUI.contentID);
 
@@ -144,6 +146,10 @@ class app {
         });
     }
 
+    backChart(){
+        this.currentChart.pie()
+    }
+
     topCompaniesChart(){
         let appContent = document.getElementById(appUI.contentID);
         let chartContainer = document.getElementById(appUI.chartContainerCompanies);
@@ -177,6 +183,7 @@ class app {
 
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
+                back.addEventListener(this.backChart);
                 titleChart.appendChild(back);
 
                 let topRequestChart = this.topCompanyChart(companies);

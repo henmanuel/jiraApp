@@ -349,6 +349,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class app {
     constructor(){
+        this.currentChart = null;
+
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].list().then((projects)=>{
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
 
@@ -488,6 +490,10 @@ class app {
         });
     }
 
+    backChart(){
+        this.currentChart.pie()
+    }
+
     topCompaniesChart(){
         let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
         let chartContainer = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies);
@@ -521,6 +527,7 @@ class app {
 
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
+                back.addEventListener(this.backChart);
                 titleChart.appendChild(back);
 
                 let topRequestChart = this.topCompanyChart(companies);
