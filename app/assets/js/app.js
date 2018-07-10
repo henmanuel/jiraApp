@@ -146,9 +146,9 @@ class app {
 
     topRequestTypes(companies){
         let data = [];
-        let issues = [];
         for(let company in companies){
             if(companies.hasOwnProperty(company)){
+                let issues = [];
                 for(let branch in companies[company]){
                     if(companies[company].hasOwnProperty(branch)){
                         for(let type in companies[company][branch]){
