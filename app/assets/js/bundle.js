@@ -494,10 +494,14 @@ class app {
             if(companies.hasOwnProperty(company)){
                 for(let branch in companies[company]){
                     if(companies[company].hasOwnProperty(branch)){
-                        for(let issue in companies[company][branch]){
-                            let issues = 0;
-                            if(companies[company][branch].hasOwnProperty(issue)){
-                                data[company] = ++issues
+                        let issues = 0;
+                        for(let type in companies[company][branch]){
+                            if(companies[company][branch].hasOwnProperty(type)){
+                                for(let issue in companies[company][branch][type]){
+                                    if(companies[company][branch][type].hasOwnProperty(issue)){
+                                        data[company] = ++issues
+                                    }
+                                }
                             }
                         }
                     }
