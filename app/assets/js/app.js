@@ -186,8 +186,8 @@ class app {
                 back.addEventListener('click', this.backChart);
                 titleChart.appendChild(back);
 
-                let topRequestChart = this.topCompanyChart(companies);
-                topRequestChart.pie();
+                this.currentChart = this.topCompanyChart(companies);
+                this.currentChart.pie();
             }
         });
     }
@@ -239,8 +239,8 @@ class app {
                 }
             }
 
-            let topCompanyChart = this.topBranchesChart(dataBranch, companies[option]);
-            topCompanyChart.pie();
+            this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
+            this.currentChart.pie();
         });
     }
 
@@ -266,8 +266,8 @@ class app {
                 }
             }
 
-            let topIssuesChart = this.topTypeIssuesChart(dataTypes);
-            topIssuesChart.pie()
+            this.currentChart = this.topTypeIssuesChart(dataTypes);
+            this.currentChart.pie()
         });
     }
 
