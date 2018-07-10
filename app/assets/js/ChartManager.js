@@ -15,7 +15,7 @@ export class ChartManager{
         chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
 
         let chart = document.getElementById(this.name);
-        new Chart(chart,{
+        this.chartNode = new Chart(chart,{
             type: type,
             data: data,
             options: options

@@ -115,7 +115,7 @@ class ChartManager{
         chartContent.innerHTML = `<canvas id="${this.name}" width="100%" height="100%"></canvas>`;
 
         let chart = document.getElementById(this.name);
-        new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(chart,{
+        this.chartNode = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(chart,{
             type: type,
             data: data,
             options: options
