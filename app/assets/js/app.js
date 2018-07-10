@@ -205,7 +205,7 @@ class app {
         return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
             titleChart.innerHTML = null;
-            titleChart.innerText = `Issues in branches to ${option}`;
+            titleChart.innerText = `Issues in ${option} company`;
 
             let dataBranch = [];
             for(let branch in companies[option]){
@@ -231,6 +231,10 @@ class app {
 
     topBranchesChart(branches, branchIssues){
         return this.newChart(branches, 'topBranchChart', appUI.topCompaniesContentChart, (option)=>{
+            let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
+            titleChart.innerHTML = null;
+            titleChart.innerText = `Issues in ${option} branch`;
+
             let dataTypes = [];
             for(let type in branchIssues[option]){
                 if(branchIssues[option].hasOwnProperty(type)){
