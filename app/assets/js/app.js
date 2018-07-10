@@ -181,14 +181,7 @@ class app {
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
-                    let index = this.backChart.length;
-
-                    if(!index){
-                        this.topCompaniesChart()
-                    }else{
-                        --index;
-                        this.backChart[index].pie()
-                    }
+                    this.backChart[this.currentChart.name].pie()
                 });
 
                 titleChart.appendChild(back);
@@ -246,7 +239,6 @@ class app {
             }
 
             this.backChart['topCompaniesChart'] = this.currentChart;
-            this.backChart.length++;
             this.currentChart = this.topBranchesChart(dataBranch, companies[option]);
             this.currentChart.pie();
         });
@@ -276,8 +268,7 @@ class app {
 
             this.backChart['topBranchChart'] = this.currentChart;
             this.backChart.length++;
-            this.currentChart = this.topTypeIssuesChart(dataTypes);
-            this.currentChart.pie()
+            this.topTypeIssuesChart(dataTypes).pie();
         });
     }
 
