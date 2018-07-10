@@ -168,7 +168,7 @@ class app {
             }
         }
 
-        return this.newChart(data, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
+        return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
             titleChart.innerText = option;
             let backOp = document.createElement('span');
             backOp.id = appUI.chartBackOption;

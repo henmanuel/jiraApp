@@ -512,7 +512,7 @@ class app {
             }
         }
 
-        return this.newChart(data, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
+        return this.newChart(dataCompany, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
             titleChart.innerText = option;
             let backOp = document.createElement('span');
             backOp.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
