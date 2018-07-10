@@ -526,8 +526,9 @@ class app {
 
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
-                back.addEventListener('click', (e)=>{
-                    this.backChart[e].pie()
+                back.addEventListener('click', ()=>{
+                    let index = this.backChart.length -1;
+                    this.backChart[index].pie()
                 });
 
                 titleChart.appendChild(back);

@@ -180,8 +180,9 @@ class app {
 
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
-                back.addEventListener('click', (e)=>{
-                    this.backChart[e].pie()
+                back.addEventListener('click', ()=>{
+                    let index = this.backChart.length -1;
+                    this.backChart[index].pie()
                 });
 
                 titleChart.appendChild(back);
