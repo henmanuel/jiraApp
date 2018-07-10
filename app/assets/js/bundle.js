@@ -350,6 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 class app {
     constructor(){
         this.currentChart = null;
+        this.backChart = null;
 
         _Project__WEBPACK_IMPORTED_MODULE_1__["Project"].list().then((projects)=>{
             let appContent = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID);
@@ -444,6 +445,8 @@ class app {
                     req = false;
                 }
 
+                this.backChart = this.currentChart;
+
                 if(req){
                     action(req)
                 }
@@ -524,7 +527,7 @@ class app {
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                 back.addEventListener('click', ()=>{
-                    this.currentChart.pie()
+                    this.backChart.pie()
                 });
 
                 titleChart.appendChild(back);

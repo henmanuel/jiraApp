@@ -6,6 +6,7 @@ import {ConnectorService} from './ConnectorService'
 class app {
     constructor(){
         this.currentChart = null;
+        this.backChart = null;
 
         Project.list().then((projects)=>{
             let appContent = document.getElementById(appUI.contentID);
@@ -100,6 +101,8 @@ class app {
                     req = false;
                 }
 
+                this.backChart = this.currentChart;
+
                 if(req){
                     action(req)
                 }
@@ -180,7 +183,7 @@ class app {
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
-                    this.currentChart.pie()
+                    this.backChart.pie()
                 });
 
                 titleChart.appendChild(back);
