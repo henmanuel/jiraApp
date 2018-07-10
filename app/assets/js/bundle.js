@@ -547,6 +547,10 @@ class app {
         }
 
         return this.newChart(dataCompany, 'topCompaniesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (option)=>{
+            let titleChart = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart + '-title');
+            titleChart.innerHTML = null;
+            titleChart.innerText = `Issues in branches to ${option}`;
+
             let dataBranch = [];
             for(let branch in companies[option]){
                 if(companies[option].hasOwnProperty(branch)){

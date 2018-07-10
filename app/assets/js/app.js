@@ -203,6 +203,10 @@ class app {
         }
 
         return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
+            let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
+            titleChart.innerHTML = null;
+            titleChart.innerText = `Issues in branches to ${option}`;
+
             let dataBranch = [];
             for(let branch in companies[option]){
                 if(companies[option].hasOwnProperty(branch)){
