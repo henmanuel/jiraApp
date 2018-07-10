@@ -209,11 +209,11 @@ class app {
 
         return this.newChart(dataCompany, 'topCompaniesChart', appUI.topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
+            let back = document.getElementById(appUI.chartBackOption);
             titleChart.innerHTML = null;
             titleChart.innerText = `Issues in ${option} company`;
-
-            let back = document.getElementById(appUI.chartBackOption);
             back.innerText = 'Back';
+            titleChart.appendChild(back);
 
             let dataBranch = [];
             for(let branch in companies[option]){
@@ -240,8 +240,11 @@ class app {
     topBranchesChart(branches, branchIssues){
         return this.newChart(branches, 'topBranchChart', appUI.topCompaniesContentChart, (option)=>{
             let titleChart = document.getElementById(appUI.topCompaniesContentChart + '-title');
+            let back = document.getElementById(appUI.chartBackOption);
             titleChart.innerHTML = null;
             titleChart.innerText = `Issues in ${option} branch`;
+            back.innerText = 'Back';
+            titleChart.appendChild(back);
 
             let dataTypes = [];
             for(let type in branchIssues[option]){
