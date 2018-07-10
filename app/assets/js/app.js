@@ -153,15 +153,15 @@ class app {
                 for(let branch in companies[company]){
                     if(companies[company].hasOwnProperty(branch)){
                         for(let type in companies[company][branch]){
-                            let branchIssues = [];
+                            let branchIssues = [branch => []];
                             if(companies[company][branch].hasOwnProperty(type)){
                                 for(let issue in companies[company][branch][type]){
                                     if(companies[company][branch][type].hasOwnProperty(issue)){
-                                        branchIssues[issue] = companies[company][branch][type][issue];
+                                        branchIssues[branch][issue] = companies[company][branch][type][issue];
                                         companyIssues[issue] = companies[company][branch][type][issue];
 
                                         dataCompany[company] = companyIssues;
-                                        dataBranch[company][branch] = branchIssues;
+                                        dataBranch[company] = branchIssues;
                                     }
                                 }
                             }
