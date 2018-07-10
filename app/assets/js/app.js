@@ -227,19 +227,20 @@ class app {
 
     topBranchesChart(branches){
         return this.newChart(branches, 'topBranchChart', appUI.topCompaniesContentChart, (option)=>{
-            let dataIssueType = [];
+            let dataTypes = [];
             for(let type in branches[option]){
                 if(branches[option].hasOwnProperty(type)){
+                    let dataIssueType = [];
                     for(let issue in branches[option][type]){
                         if(branches[option][type].hasOwnProperty(issue)){
                             dataIssueType[issue] = branches[option][type][issue];
-                            dataIssueType[type] = dataIssueType;
+                            dataTypes[type] = dataIssueType;
                         }
                     }
                 }
             }
 
-            this.topTypeIssuesChart(dataIssueType);
+            this.topTypeIssuesChart(dataTypes);
         });
     }
 
