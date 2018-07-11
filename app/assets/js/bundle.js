@@ -414,6 +414,43 @@ class app {
         });
     }
 
+    tableIssues(tableContainer, issues){
+        let table = document.createElement('div');
+        let container = document.getElementById(tableContainer);
+
+        table.id = 'table';
+        container.innerHTML = null;
+        if(requestTypes.hasOwnProperty(type)){
+            for(let issue in issues){
+                if(issues.hasOwnProperty(issue)){
+                    _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
+                    _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssueInfo(issue).then((info)=>{
+                        console.log(info);
+                        let row = document.createElement('div');
+
+                        let icon = document.createElement('img');
+                        icon.src = info.fields.customfield_10013.requestType.icon._links.iconUrls['16x16'];
+
+                        let title = document.createElement('a');
+                        title.href = info.fields.customfield_10013._links.web;
+                        title.innerText = info.key;
+
+                        let type = document.createElement('span');
+                        type.innerHTML = info.fields.customfield_10013.requestType.description;
+
+                        row.classList.add('row');
+                        row.appendChild(icon);
+                        row.appendChild(title);
+                        row.appendChild(type);
+                        table.appendChild(row);
+                        container.innerHTML = null;
+                        container.appendChild(table)
+                    });
+                }
+            }
+        }
+    }
+
     newChart(dataValues, name, container, action){
         let contentChart = new _ChartManager__WEBPACK_IMPORTED_MODULE_2__["ChartManager"](name, container);
 
@@ -487,40 +524,7 @@ class app {
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
-                    let table = document.createElement('div');
-                    let container = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
-
-                    table.id = 'table';
-                    container.innerHTML = null;
-                    if(requestTypes.hasOwnProperty(type)){
-                        for(let issue in requestTypes[type]){
-                            if(requestTypes[type].hasOwnProperty(issue)){
-                                _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
-                                _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssueInfo(issue).then((info)=>{
-                                    console.log(info);
-                                    let row = document.createElement('div');
-
-                                    let icon = document.createElement('img');
-                                    icon.src = info.fields.customfield_10013.requestType.icon._links.iconUrls['16x16'];
-
-                                    let title = document.createElement('a');
-                                    title.href = info.fields.customfield_10013._links.web;
-                                    title.innerText = info.key;
-
-                                    let type = document.createElement('span');
-                                    type.innerHTML = info.fields.customfield_10013.requestType.description;
-
-                                    row.classList.add('row');
-                                    row.appendChild(icon);
-                                    row.appendChild(title);
-                                    row.appendChild(type);
-                                    table.appendChild(row);
-                                    container.innerHTML = null;
-                                    container.appendChild(table)
-                                });
-                            }
-                        }
-                    }
+                    this.tableIssues(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, requestTypes[type])
                 });
 
                 topIssuesChart.pie();
