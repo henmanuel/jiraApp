@@ -486,7 +486,7 @@ class app {
                     let row = document.createElement('div');
                     let container = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
 
-                    row.addClass('row');
+                    row.classList.add('row');
                     if(requestTypes.hasOwnProperty(type)){
                         for(let issue in requestTypes[type]){
                             if(requestTypes[type].hasOwnProperty(issue)){

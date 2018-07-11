@@ -140,7 +140,7 @@ class app {
                     let row = document.createElement('div');
                     let container = document.getElementById(appUI.topIssuesContentChart);
 
-                    row.addClass('row');
+                    row.classList.add('row');
                     if(requestTypes.hasOwnProperty(type)){
                         for(let issue in requestTypes[type]){
                             if(requestTypes[type].hasOwnProperty(issue)){
