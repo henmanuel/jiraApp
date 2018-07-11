@@ -487,12 +487,12 @@ class app {
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
+                    let table = document.createElement('div');
                     let container = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
 
+                    table.id = 'table';
                     container.innerHTML = null;
                     if(requestTypes.hasOwnProperty(type)){
-                        let table = document.createElement('div');
-                        table.id = 'table';
                         for(let issue in requestTypes[type]){
                             if(requestTypes[type].hasOwnProperty(issue)){
                                 _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
@@ -515,7 +515,8 @@ class app {
                                     row.appendChild(title);
                                     row.appendChild(type);
                                     table.appendChild(row);
-                                    container.innerHTML = table;
+                                    container.innerHTML = null;
+                                    container.appendChild(table)
                                 });
                             }
                         }
