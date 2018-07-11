@@ -423,7 +423,7 @@ class app {
 
         for(let issue in issues){
             if(issues.hasOwnProperty(issue)){
-                _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
+                _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = tableContainer;
                 _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssueInfo(issue).then((info)=>{
                     console.log(info);
                     let row = document.createElement('div');
@@ -665,8 +665,8 @@ class app {
     }
 
     topTypeIssuesChart(dataIssueType){
-        return this.newChart(dataIssueType, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (issue)=>{
-            alert(issue);
+        return this.newChart(dataIssueType, 'topIssuesChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, (type)=>{
+            this.tableIssues(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topCompaniesContentChart, dataIssueType[type])
         });
     }
 }new app();

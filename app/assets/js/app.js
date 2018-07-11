@@ -73,7 +73,7 @@ class app {
 
         for(let issue in issues){
             if(issues.hasOwnProperty(issue)){
-                appUI.elementLoad = appUI.topIssuesContentChart;
+                appUI.elementLoad = tableContainer;
                 ConnectorService.getIssueInfo(issue).then((info)=>{
                     console.log(info);
                     let row = document.createElement('div');
@@ -315,8 +315,8 @@ class app {
     }
 
     topTypeIssuesChart(dataIssueType){
-        return this.newChart(dataIssueType, 'topIssuesChart', appUI.topCompaniesContentChart, (issue)=>{
-            alert(issue);
+        return this.newChart(dataIssueType, 'topIssuesChart', appUI.topCompaniesContentChart, (type)=>{
+            this.tableIssues(appUI.topCompaniesContentChart, dataIssueType[type])
         });
     }
 }new app();
