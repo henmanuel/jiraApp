@@ -48,6 +48,12 @@ class WebHookScore
       ];
     }
 
+    $data = [
+      'issues' => [$request['key']],
+      'data' => ['score' => 10]
+    ];
+
+    $sendScore = new requestHTTP($data, CoreConfig::WH_SCORE_UPDATE);
     $issues = Cache::loadDocument(self::Score, $issues, false);
 
     return ($issues);

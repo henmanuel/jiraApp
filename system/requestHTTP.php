@@ -1,5 +1,4 @@
 <?php
-require_once('CoreConfig.class.php');
 
 /**
  * Mario Vargas Ugalde
