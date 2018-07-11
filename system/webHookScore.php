@@ -3,7 +3,7 @@ require './Cache.class.php';
 require './requestHTTP.php';
 require './CoreConfig.class.php';
 
-class WebHookIssuesTop
+class WebHookScore
 {
   const Score = 'scoreIssues';
 
@@ -60,4 +60,4 @@ class WebHookIssuesTop
   }
 }
 
-new WebHookIssuesTop();
+new WebHookScore();
