@@ -31,6 +31,8 @@ class app {
 
             selectContainer.id = appUI.selectContainer;
             projectsList.addEventListener('change', (e)=>{
+                document.getElementById(appUI.chartContainerIssues).innerHTML = null;
+                document.getElementById(appUI.chartContainerCompanies).innerHTML = null;
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart();
                 this.topIssuesCompanies();

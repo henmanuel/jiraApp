@@ -381,6 +381,8 @@ class app {
 
             selectContainer.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].selectContainer;
             projectsList.addEventListener('change', (e)=>{
+                document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerIssues).innerHTML = null;
+                document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartContainerCompanies).innerHTML = null;
                 this.currentProject = this.projects[e.currentTarget.value];
                 this.topIssuesChart();
                 this.topIssuesCompanies();
