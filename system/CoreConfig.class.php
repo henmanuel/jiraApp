@@ -63,5 +63,5 @@ class CoreConfig
   /**
    * Update score
    */
-  const WH_SCORE_UPDATE = 'https://automation.codebarrel.io/pro/hooks/d5cfa05ad77b02d008f133299b31cf6722dd8d86';
+  const WH_SCORE_UPDATE = 'https://automation.codebarrel.io/pro/hooks/547443de3f6850003c9cf816735b40432d899973';
 }
