@@ -184,6 +184,7 @@ class app {
                     if(!index){
                         this.topIssuesCompanies();
                     }else{
+                        --index;
                         this.backChart[index].pie();
                         --this.backChart.length
                     }
