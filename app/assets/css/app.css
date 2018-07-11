@@ -48,6 +48,16 @@
     margin-left: 10%;
 }
 
+.row{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+}
+
 .prettyLoader,
 .prettyLoader:before,
 .prettyLoader:after {
