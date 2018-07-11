@@ -68,16 +68,14 @@ class app {
         let table = document.createElement('div');
         let container = document.getElementById(tableContainer);
 
-        table.id = 'table';
+        table.classList.add('table');
         container.innerHTML = null;
 
         for(let issue in issues){
             if(issues.hasOwnProperty(issue)){
                 appUI.elementLoad = tableContainer;
                 ConnectorService.getIssueInfo(issue).then((info)=>{
-                    console.log(info);
                     let row = document.createElement('div');
-
                     let icon = document.createElement('img');
                     icon.src = info.fields.customfield_10013.requestType.icon._links.iconUrls['16x16'];
 

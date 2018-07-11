@@ -60,6 +60,10 @@
     border-bottom: 1px solid black;
 }
 
+.table{
+    margin-top: 50px;
+}
+
 .row a, span{
     margin-left: 40px;
 }
