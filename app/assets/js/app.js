@@ -173,7 +173,7 @@ class app {
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
                     let back = document.createElement('span');
 
-                    back.innerText = null;
+                    back.innerText = 'Back';
                     back.id = appUI.chartBackOption;
                     back.addEventListener('click', ()=>{
                         this.topIssuesChart()
