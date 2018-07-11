@@ -143,10 +143,25 @@ class app {
                     if(requestTypes.hasOwnProperty(type)){
                         for(let issue in requestTypes[type]){
                             if(requestTypes[type].hasOwnProperty(issue)){
+                                appUI.elementLoad = appUI.topIssuesContentChart;
                                 ConnectorService.getIssueInfo(issue).then((info)=>{
                                     let row = document.createElement('div');
+
+                                    let icon = document.createElement('img');
+                                    icon.src = info.customfield_10013.requestType.icon._links.iconUrls['16x16'];
+
+                                    let title = document.createElement('a');
+                                    title.href = info._links.web;
+                                    title.innerText = info.key;
+
+                                    let type = document.createElement('span');
+                                    type.innerHTML = info.customfield_10013.requestType.description;
+
                                     row.classList.add('row');
                                     row.innerText = 'test';
+                                    row.appendChild(icon);
+                                    row.appendChild(title);
+                                    row.appendChild(type);
                                     container.appendChild(row);
                                     console.log(info)
                                 });
