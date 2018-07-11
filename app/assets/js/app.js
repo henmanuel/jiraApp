@@ -162,7 +162,6 @@ class app {
                                     row.appendChild(icon);
                                     row.appendChild(title);
                                     row.appendChild(type);
-                                    container.innerHTML = null;
                                     container.appendChild(row);
                                 });
                             }

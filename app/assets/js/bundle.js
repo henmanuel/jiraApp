@@ -219,7 +219,7 @@ class connectorService {
      * @returns {Promise}
      */
     load(action, method = this.getMethod, data = {}){
-        Object(_PrettyLoader__WEBPACK_IMPORTED_MODULE_1__["PrettyLoader"])(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad);
+        Object(_PrettyLoader__WEBPACK_IMPORTED_MODULE_1__["PrettyLoader"])();
 
         return new Promise((resolve)=>{
             AP.request(action, {
@@ -227,11 +227,10 @@ class connectorService {
                 contentType: "application/json",
                 data: JSON.stringify(data),
                 success: function(response){
-                    console.log(response);
+                    document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad).innerHTML = null;
                     resolve(JSON.parse(response))
                 },
                 error: function(e){
-                    console.log(e);
                     document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].contentID).innerHTML = e
                 }
             })
@@ -255,6 +254,7 @@ class connectorService {
                 data: request,
                 dataType: 'jsonp'
             }).done(function(response){
+                document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad).innerHTML = null;
                 resolve(response);
             }).fail(function(response){
                 let dataResponse = 'A error as occurred';
@@ -512,7 +512,6 @@ class app {
                                     row.appendChild(icon);
                                     row.appendChild(title);
                                     row.appendChild(type);
-                                    container.innerHTML = null;
                                     container.appendChild(row);
                                 });
                             }

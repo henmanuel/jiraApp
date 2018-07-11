@@ -68,7 +68,7 @@ class connectorService {
      * @returns {Promise}
      */
     load(action, method = this.getMethod, data = {}){
-        PrettyLoader(appUI.elementLoad);
+        PrettyLoader();
 
         return new Promise((resolve)=>{
             AP.request(action, {
@@ -76,11 +76,10 @@ class connectorService {
                 contentType: "application/json",
                 data: JSON.stringify(data),
                 success: function(response){
-                    console.log(response);
+                    document.getElementById(appUI.elementLoad).innerHTML = null;
                     resolve(JSON.parse(response))
                 },
                 error: function(e){
-                    console.log(e);
                     document.getElementById(appUI.contentID).innerHTML = e
                 }
             })
@@ -104,6 +103,7 @@ class connectorService {
                 data: request,
                 dataType: 'jsonp'
             }).done(function(response){
+                document.getElementById(appUI.elementLoad).innerHTML = null;
                 resolve(response);
             }).fail(function(response){
                 let dataResponse = 'A error as occurred';
