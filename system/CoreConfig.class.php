@@ -59,4 +59,9 @@ class CoreConfig
    * Encrypt algorithm to use
    */
   const ENCRYPT = ['HS256'];
+
+  /**
+   * Update score
+   */
+  const WH_SCORE_UPDATE = 'https://automation.codebarrel.io/pro/hooks/d5cfa05ad77b02d008f133299b31cf6722dd8d86';
 }
