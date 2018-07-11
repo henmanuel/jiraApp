@@ -483,13 +483,13 @@ class app {
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
-                    let row = document.createElement('div');
                     let container = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
-
-                    row.classList.add('row');
                     container.innerHTML = null;
+
                     if(requestTypes.hasOwnProperty(type)){
                         for(let issue in requestTypes[type]){
+                            let row = document.createElement('div');
+                            row.classList.add('row');
                             if(requestTypes[type].hasOwnProperty(issue)){
                                 row.innerText = 'test';
                                 container.appendChild(row);
