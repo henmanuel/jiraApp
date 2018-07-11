@@ -181,10 +181,11 @@ class app {
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
                     let index = this.backChart.length;
+
+                    --index;
                     if(!index){
                         this.topIssuesCompanies();
                     }else{
-                        --index;
                         this.backChart[index].pie();
                         --this.backChart.length
                     }
