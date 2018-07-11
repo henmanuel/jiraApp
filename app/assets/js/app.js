@@ -180,11 +180,12 @@ class app {
                 back.innerText = null;
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
-                    if(!this.backChart.length){
+                    let index = this.backChart.length;
+                    if(!index){
                         this.topIssuesCompanies();
                     }else{
-                        --this.backChart.length;
-                        this.backChart[this.backChart.length].pie();
+                        this.backChart[index].pie();
+                        --this.backChart.length
                     }
                 });
 
