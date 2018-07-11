@@ -49,12 +49,8 @@ class WebHookIssuesTop
     }
 
     $data = [
-      'issues' => [
-        $request['key']
-      ],
-      'data' => [
-        'score' => 10
-      ]
+      'issues' => [$request['key']],
+      'data' => ['score' => 10]
     ];
 
     $sendScore = new requestHTTP($data, CoreConfig::WH_SCORE_UPDATE);
