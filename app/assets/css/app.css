@@ -32,7 +32,10 @@
 
 .app-chart-back-option{
     float: right;
+    color: white;
+    padding: 2px;
     cursor: pointer;
+    background-color: #9aa0ad;
 }
 
 #app-top-issues-chart-title, #app-top-companies-chart-title{
