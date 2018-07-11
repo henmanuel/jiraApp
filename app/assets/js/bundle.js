@@ -509,10 +509,10 @@ class app {
                                     type.innerHTML = info.fields.customfield_10013.requestType.description;
 
                                     row.classList.add('row');
-                                    row.innerText = 'test';
                                     row.appendChild(icon);
                                     row.appendChild(title);
                                     row.appendChild(type);
+                                    container.innerHTML = null;
                                     container.appendChild(row);
                                 });
                             }
