@@ -524,7 +524,7 @@ class app {
                     let back = document.createElement('span');
 
                     back.innerText = 'Back';
-                    back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
+                    back.classList.add(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption);
                     back.addEventListener('click', ()=>{
                         this.topIssuesChart()
                     });
@@ -572,6 +572,7 @@ class app {
                 let back = document.createElement('span');
 
                 back.innerText = null;
+                back.classList.add(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption);
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                 back.addEventListener('click', ()=>{
                     let index = this.backChart.length;

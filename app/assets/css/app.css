@@ -30,7 +30,7 @@
     overflow-y: auto;
 }
 
-#app-chart-back-option{
+.app-chart-back-option{
     float: right;
     cursor: pointer;
 }

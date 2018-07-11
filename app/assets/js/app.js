@@ -174,7 +174,7 @@ class app {
                     let back = document.createElement('span');
 
                     back.innerText = 'Back';
-                    back.id = appUI.chartBackOption;
+                    back.classList.add(appUI.chartBackOption);
                     back.addEventListener('click', ()=>{
                         this.topIssuesChart()
                     });
@@ -222,6 +222,7 @@ class app {
                 let back = document.createElement('span');
 
                 back.innerText = null;
+                back.classList.add(appUI.chartBackOption);
                 back.id = appUI.chartBackOption;
                 back.addEventListener('click', ()=>{
                     let index = this.backChart.length;
