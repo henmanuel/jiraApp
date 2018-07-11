@@ -189,6 +189,10 @@ class connectorService {
         return this.httpServiceAsync(request, this.getMethod);
     }
 
+    getIssueInfo(issueId){
+        return this.load(`/rest/api/2/issue/${issueId}`)
+    }
+
     getQueuesController(){
         let request = {
             'document' : 'queues'
@@ -484,15 +488,18 @@ class app {
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
                     let container = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
-                    container.innerHTML = null;
 
+                    container.innerHTML = null;
                     if(requestTypes.hasOwnProperty(type)){
                         for(let issue in requestTypes[type]){
-                            let row = document.createElement('div');
-                            row.classList.add('row');
                             if(requestTypes[type].hasOwnProperty(issue)){
-                                row.innerText = 'test';
-                                container.appendChild(row);
+                                _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssueInfo(issue).then((info)=>{
+                                    let row = document.createElement('div');
+                                    row.classList.add('row');
+                                    row.innerText = 'test';
+                                    container.appendChild(row);
+                                    console.log(info)
+                                });
                             }
                         }
                     }

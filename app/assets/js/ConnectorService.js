@@ -38,6 +38,10 @@ class connectorService {
         return this.httpServiceAsync(request, this.getMethod);
     }
 
+    getIssueInfo(issueId){
+        return this.load(`/rest/api/2/issue/${issueId}`)
+    }
+
     getQueuesController(){
         let request = {
             'document' : 'queues'

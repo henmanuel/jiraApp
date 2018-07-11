@@ -138,15 +138,18 @@ class app {
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
                     let container = document.getElementById(appUI.topIssuesContentChart);
-                    container.innerHTML = null;
 
+                    container.innerHTML = null;
                     if(requestTypes.hasOwnProperty(type)){
                         for(let issue in requestTypes[type]){
-                            let row = document.createElement('div');
-                            row.classList.add('row');
                             if(requestTypes[type].hasOwnProperty(issue)){
-                                row.innerText = 'test';
-                                container.appendChild(row);
+                                ConnectorService.getIssueInfo(issue).then((info)=>{
+                                    let row = document.createElement('div');
+                                    row.classList.add('row');
+                                    row.innerText = 'test';
+                                    container.appendChild(row);
+                                    console.log(info)
+                                });
                             }
                         }
                     }
