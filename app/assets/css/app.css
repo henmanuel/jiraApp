@@ -56,6 +56,11 @@
     justify-content: center;
     -webkit-align-items: center;
     -webkit-justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.row a, span{
+    margin-left: 40px;
 }
 
 .prettyLoader,
