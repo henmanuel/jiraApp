@@ -68,8 +68,8 @@ class app {
         let table = document.createElement('div');
         let container = document.getElementById(tableContainer);
 
-        table.classList.add('table');
         container.innerHTML = null;
+        table.classList.add('table');
 
         for(let issue in issues){
             if(issues.hasOwnProperty(issue)){
