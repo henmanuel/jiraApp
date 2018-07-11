@@ -495,6 +495,7 @@ class app {
                             if(requestTypes[type].hasOwnProperty(issue)){
                                 _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
                                 _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssueInfo(issue).then((info)=>{
+                                    console.log(info);
                                     let row = document.createElement('div');
 
                                     let icon = document.createElement('img');
@@ -513,7 +514,6 @@ class app {
                                     row.appendChild(title);
                                     row.appendChild(type);
                                     container.appendChild(row);
-                                    console.log(info)
                                 });
                             }
                         }
