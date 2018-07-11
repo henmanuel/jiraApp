@@ -49,7 +49,7 @@ class WebHookScore
     }
 
     $data = [
-      'issues' => ['SUPPORT-136'],
+      'issues' => [$request['key']],
       'data' => ['score' => 10]
     ];
 

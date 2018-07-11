@@ -18,7 +18,7 @@ class requestHTTP
         CURLOPT_SSL_VERIFYHOST => 0,
         CURLOPT_SSL_VERIFYPEER => 0,
         CURLOPT_URL => $url,
-        CURLOPT_POSTFIELDS => urldecode(http_build_query($data, '', '&')),
+        CURLOPT_POSTFIELDS => $data,
         CURLOPT_USERAGENT => "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)"
       ));
 
