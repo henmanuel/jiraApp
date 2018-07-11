@@ -491,11 +491,11 @@ class app {
 
                     container.innerHTML = null;
                     if(requestTypes.hasOwnProperty(type)){
+                        let table = document.createElement('div');
+                        table.id = 'table';
                         for(let issue in requestTypes[type]){
                             if(requestTypes[type].hasOwnProperty(issue)){
                                 _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart;
-                                let table = document.createElement('div');
-                                table.id = 'table';
                                 _ConnectorService__WEBPACK_IMPORTED_MODULE_3__["ConnectorService"].getIssueInfo(issue).then((info)=>{
                                     console.log(info);
                                     let row = document.createElement('div');
@@ -514,12 +514,11 @@ class app {
                                     row.appendChild(icon);
                                     row.appendChild(title);
                                     row.appendChild(type);
-                                    table.appendChild(row)
+                                    table.appendChild(row);
+                                    container.innerHTML = table;
                                 });
                             }
                         }
-
-                        container.appendChild(table);
                     }
                 });
 
