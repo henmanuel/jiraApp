@@ -27,6 +27,7 @@
 #app-container-issues, #app-container-Companies{
     width: 50%;
     float: left;
+    overflow-y: auto;
 }
 
 #app-chart-back-option{
