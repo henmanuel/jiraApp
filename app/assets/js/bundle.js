@@ -483,7 +483,18 @@ class app {
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
-                    alert(type)
+                    let row = document.createElement('div');
+                    let container = document.getElementById(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart);
+
+                    row.addClass('row');
+                    if(requestTypes.hasOwnProperty(type)){
+                        for(let issue in requestTypes[type]){
+                            if(requestTypes[type].hasOwnProperty(issue)){
+                                row.innerText = 'test';
+                                container.appendChild(row);
+                            }
+                        }
+                    }
                 });
 
                 topIssuesChart.pie();
