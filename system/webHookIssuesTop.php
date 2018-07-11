@@ -70,4 +70,4 @@ class WebHookIssuesTop
   }
 }
 
-new WebHookScore();
+new WebHookIssuesTop();
