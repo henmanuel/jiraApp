@@ -68,7 +68,7 @@ class connectorService {
      * @returns {Promise}
      */
     load(action, method = this.getMethod, data = {}){
-        PrettyLoader();
+        PrettyLoader(appUI.elementLoad);
 
         return new Promise((resolve)=>{
             AP.request(action, {

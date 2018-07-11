@@ -219,7 +219,7 @@ class connectorService {
      * @returns {Promise}
      */
     load(action, method = this.getMethod, data = {}){
-        Object(_PrettyLoader__WEBPACK_IMPORTED_MODULE_1__["PrettyLoader"])();
+        Object(_PrettyLoader__WEBPACK_IMPORTED_MODULE_1__["PrettyLoader"])(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].elementLoad);
 
         return new Promise((resolve)=>{
             AP.request(action, {
