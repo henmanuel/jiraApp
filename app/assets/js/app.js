@@ -70,33 +70,32 @@ class app {
 
         table.id = 'table';
         container.innerHTML = null;
-        if(requestTypes.hasOwnProperty(type)){
-            for(let issue in issues){
-                if(issues.hasOwnProperty(issue)){
-                    appUI.elementLoad = appUI.topIssuesContentChart;
-                    ConnectorService.getIssueInfo(issue).then((info)=>{
-                        console.log(info);
-                        let row = document.createElement('div');
 
-                        let icon = document.createElement('img');
-                        icon.src = info.fields.customfield_10013.requestType.icon._links.iconUrls['16x16'];
+        for(let issue in issues){
+            if(issues.hasOwnProperty(issue)){
+                appUI.elementLoad = appUI.topIssuesContentChart;
+                ConnectorService.getIssueInfo(issue).then((info)=>{
+                    console.log(info);
+                    let row = document.createElement('div');
 
-                        let title = document.createElement('a');
-                        title.href = info.fields.customfield_10013._links.web;
-                        title.innerText = info.key;
+                    let icon = document.createElement('img');
+                    icon.src = info.fields.customfield_10013.requestType.icon._links.iconUrls['16x16'];
 
-                        let type = document.createElement('span');
-                        type.innerHTML = info.fields.customfield_10013.requestType.description;
+                    let title = document.createElement('a');
+                    title.href = info.fields.customfield_10013._links.web;
+                    title.innerText = info.key;
 
-                        row.classList.add('row');
-                        row.appendChild(icon);
-                        row.appendChild(title);
-                        row.appendChild(type);
-                        table.appendChild(row);
-                        container.innerHTML = null;
-                        container.appendChild(table)
-                    });
-                }
+                    let type = document.createElement('span');
+                    type.innerHTML = info.fields.customfield_10013.requestType.description;
+
+                    row.classList.add('row');
+                    row.appendChild(icon);
+                    row.appendChild(title);
+                    row.appendChild(type);
+                    table.appendChild(row);
+                    container.innerHTML = null;
+                    container.appendChild(table)
+                });
             }
         }
     }
