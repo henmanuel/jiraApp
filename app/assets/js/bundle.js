@@ -521,6 +521,16 @@ class app {
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, (type)=>{
+                    let back = document.createElement('span');
+
+                    back.innerText = null;
+                    back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
+                    back.addEventListener('click', ()=>{
+                        this.topIssuesChart()
+                    });
+
+                    titleChart.appendChild(back);
+
                     this.tableIssues(_appUI__WEBPACK_IMPORTED_MODULE_0__["default"].topIssuesContentChart, requestTypes[type])
                 });
 

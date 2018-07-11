@@ -171,6 +171,16 @@ class app {
             if(requestTypes){
                 titleChart.innerText = 'Request Types';
                 let topIssuesChart = this.newChart(requestTypes, 'topChart', appUI.topIssuesContentChart, (type)=>{
+                    let back = document.createElement('span');
+
+                    back.innerText = null;
+                    back.id = appUI.chartBackOption;
+                    back.addEventListener('click', ()=>{
+                        this.topIssuesChart()
+                    });
+
+                    titleChart.appendChild(back);
+
                     this.tableIssues(appUI.topIssuesContentChart, requestTypes[type])
                 });
 
