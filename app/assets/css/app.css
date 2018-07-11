@@ -31,6 +31,7 @@
 
 #app-chart-back-option{
     float: right;
+    cursor: pointer;
 }
 
 #app-top-issues-chart-title, #app-top-companies-chart-title{
