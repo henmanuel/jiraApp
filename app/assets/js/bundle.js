@@ -526,12 +526,11 @@ class app {
                 back.innerText = null;
                 back.id = _appUI__WEBPACK_IMPORTED_MODULE_0__["default"].chartBackOption;
                 back.addEventListener('click', ()=>{
-                    let index = this.backChart.length;
-                    if(!index){
+                    if(!this.backChart.length){
                         this.topIssuesCompanies();
                     }else{
-                        --index;
-                        this.backChart[index].pie();
+                        --this.backChart.length;
+                        this.backChart[this.backChart.length].pie();
                     }
                 });
 
