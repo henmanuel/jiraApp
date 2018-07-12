@@ -114,6 +114,7 @@ class WebHookScore
     ];
 
     $product = [
+      'Incidents',
       'Fraud',
       'Processing',
       'Cryptos',
