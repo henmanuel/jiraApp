@@ -127,7 +127,7 @@ class WebHookScore
     $brand = $this->nodeCalculate($options['brands'], $$brand);
     $product = $this->nodeCalculate($options['product'], $product);
 
-    return $product + ($company * $brand);
+    return ($product * $company) + $brand;
   }
 
   /**
