@@ -118,6 +118,7 @@ class WebHookScore
       'Processing',
       'Cryptos',
       'Integrations',
+      'Reports',
       'Development',
       'UX-Analytics',
       'KPI',
