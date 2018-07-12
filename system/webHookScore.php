@@ -79,16 +79,19 @@ class WebHookScore
 
     $brandsSport = [
       'Betcris',
-      'Solaire',
-      'Betcris Korea',
-      'Malta',
       'BookMaker',
-      'EHorses',
-      'Galaxy',
-      'Jusbet',
-      'Lottery',
-      'XChangebet'
+      'Malta',
+      'Solaire',
+      'Lottery'
     ];
+
+    /**
+    'Betcris Korea',
+    'EHorses',
+    'Galaxy',
+    'Jusbet',
+    'XChangebet'
+     */
 
     $brandsPoker = [
       'TruePoker',
@@ -127,7 +130,7 @@ class WebHookScore
     $brand = $this->nodeCalculate($options['brands'], $$brand);
     $product = $this->nodeCalculate($options['product'], $product);
 
-    return ($product * $company) + $brand;
+    return $product + $company + $brand;
   }
 
   /**
