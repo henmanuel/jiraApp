@@ -3,7 +3,7 @@
 /**
  * Mario Vargas Ugalde
  */
-class requestHTTP
+class RequestHTTP
 {
   function __construct($data, $url)
   {
