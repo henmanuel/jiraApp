@@ -14,19 +14,6 @@ class CoreConfig
    */
   const DEBUG_KEY = 'XDEBUG_SESSION_START';
 
-  /**
-   * define if we must print the exception or not.
-   * DEV must be in true
-   *
-   * @var bool
-   */
-  const PRINT_EXCEPTIONS = false;
-
-  /**
-   * User owner of the directory system
-   */
-  const USER_DIRECTORY = 'root';
-
 	/**
 	 * Expired days from cache documents
 	 */
@@ -48,17 +35,6 @@ class CoreConfig
    * @var string
    */
   const LOG_PATH = 'logs';
-
-  /**
-   * The suffix name use to require any php class in execution time
-   * @see AutoLoad::LoadClasses
-   */
-  const SUFFIX_FILE = '.class.php';
-
-  /**
-   * Encrypt algorithm to use
-   */
-  const ENCRYPT = ['HS256'];
 
   /**
    * Update score
