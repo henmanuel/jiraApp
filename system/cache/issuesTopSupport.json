@@ -1,37 +1,4 @@
 {
   "expired": false,
-  "document": {
-    "Crypto": {
-      "10122": {
-        "key": "SUPPORT-114",
-        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10122",
-        "group": [
-          "17"
-        ]
-      },
-      "10123": {
-        "key": "SUPPORT-115",
-        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10123",
-        "group": [
-          "17"
-        ]
-      }
-    },
-    "Status": {
-      "10124": {
-        "key": "SUPPORT-116",
-        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10124",
-        "group": [
-          "17"
-        ]
-      },
-      "10125": {
-        "key": "SUPPORT-117",
-        "self": "https:\/\/midasteam.atlassian.net\/rest\/api\/2\/issue\/10125",
-        "group": [
-          "17"
-        ]
-      }
-    }
-  }
+  "document": false
 }
