@@ -23,14 +23,14 @@ class RequestHTTP
       ));
 
       $response = curl_exec($curl);
+      curl_close($curl);
       if($response){
         return true;
       }else{
         return false;
       }
-    }catch(Exception $e){}
+    }catch(Exception $e){curl_close($curl);}
 
-    curl_close($curl);
     return false;
   }
 }
