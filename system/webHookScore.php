@@ -25,18 +25,17 @@ class WebHookScore
     $data = file_get_contents('php://input');
     $data = json_decode($data, true);
 
-    $issue = $data['issue'];
-    $product = $issue['fields']['customfield_10077']['value'];
-    $company = $issue['fields']['customfield_10070']['value'];
-    $brand = $issue['fields']['customfield_10070']['child']['value'];
-    $type = $issue['fields']['customfield_10013']['requestType']['name'];
+    $product = $data['fields']['customfield_10077']['value'];
+    $company = $data['fields']['customfield_10070']['value'];
+    $brand = $data['fields']['customfield_10070']['child']['value'];
+    $type = $data['fields']['customfield_10013']['requestType']['name'];
 
     $request['brand'] = $brand;
     $request['company'] = $company;
     $request['product'] = $product;
-    $request['key'] = $issue['key'];
-    $request['self'] = $issue['self'];
-    $request['group'] = $issue['fields']['customfield_10013']['requestType']['groupIds'];
+    $request['key'] = $data['key'];
+    $request['self'] = $data['self'];
+    $request['group'] = $data['fields']['customfield_10013']['requestType']['groupIds'];
 
     $options = [
       'company' => $company,
@@ -47,12 +46,12 @@ class WebHookScore
     $score = $this->scoreCalculate($options);
     $issuesDocument = Cache::getDocument(self::Score);
     if($issuesDocument){
-      $issuesDocument[$type][$issue['id']] = $request;
+      $issuesDocument[$type][$data['id']] = $request;
       $issues = $issuesDocument;
     }else{
       $issues = [
         $type => [
-          $issue['id'] => [
+          $data['id'] => [
             'score' => $score,
             'body' => $request
           ]
