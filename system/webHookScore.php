@@ -38,18 +38,6 @@ class WebHookScore
     $request['self'] = $issue['self'];
     $request['group'] = $issue['fields']['customfield_10013']['requestType']['groupIds'];
 
-    $issuesDocument = Cache::getDocument(self::Score);
-    if($issuesDocument){
-      $issuesDocument[$type][$issue['id']] = $request;
-      $issues = $issuesDocument;
-    }else{
-      $issues = [
-        $type => [
-          $issue['id'] => $request
-        ]
-      ];
-    }
-
     $options = [
       'company' => $company,
       'brands' => $brand,
@@ -57,6 +45,21 @@ class WebHookScore
     ];
 
     $score = $this->scoreCalculate($options);
+    $issuesDocument = Cache::getDocument(self::Score);
+    if($issuesDocument){
+      $issuesDocument[$type][$issue['id']] = $request;
+      $issues = $issuesDocument;
+    }else{
+      $issues = [
+        $type => [
+          $issue['id'] => [
+            'score' => $score,
+            'body' => $request
+          ]
+        ]
+      ];
+    }
+
     $data = [
       'issues' => [$request['key']],
       'data' => ['score' => $score]
